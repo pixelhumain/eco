@@ -24,7 +24,6 @@ if( $this->layout != "//layouts/empty"){
 ?>
 
 <h1 style="margin-top: 50px; text-align: center;padding:10px;">
-	<img height=50 src="<?php echo Yii::app()->getModule( Yii::app()->params["module"]["parent"] )->getAssetsUrl()?>/images/CO.png">
 	<img height=50 src="<?php echo $this->module->assetsUrl?>/images/logo.png">
 	<?php echo CHtml::encode( (isset($this->module->pageTitle))?$this->module->pageTitle:""); ?>
 </h1>

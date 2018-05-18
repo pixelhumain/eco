@@ -1,0 +1,60 @@
+.headerTitleStanalone{
+		left:-25px;
+		right:-25px;
+	}
+	.contentOnePage{
+		border: 1px solid lightgray;
+		margin-top: 25px;
+	}
+	.classifiedStandalone h2,
+	.classifiedStandalone h4,
+	.classifiedStandalone h5,
+	.classifiedStandalone h6{
+	    text-transform: none;
+	}
+	.carousel-media > ol > li.active{
+	   margin:1px;
+	   border-top: 5px solid #EF5B34 !important;
+	}
+	.carousel-media > ol > li{
+		width: 60px !important;
+	    background-color: inherit;
+	    border: inherit !important;
+	    height: 65px !important;
+	    border-radius: inherit;
+	    border-top: 5px solid lightgray !important;
+	}
+	
+	.carousel-media > ol > li > img{
+	   float:left;
+	   width:60px;
+	   height:60px;
+	}
+	.carousel-media > ol{
+		bottom: -85px
+	}
+	.carousel-media{
+		margin-bottom: 100px;
+	}
+	.informations .btn-social{
+		padding: 0px;
+	    height: inherit;
+	    width: 50px;
+	}
+	.informations .btn-social > span{
+		position: absolute;
+    	font-size: 20px;
+	}
+	.container-txtarea{
+		padding-left:5px!important;
+	}
+	.ctnr-txtarea {
+	    left: 45px !important;
+	}
+	.carousel-indicators{
+		bottom: -85px;
+		position: absolute;
+		left: 0%;
+		width: 100%;
+		margin-left: 0px;
+	}

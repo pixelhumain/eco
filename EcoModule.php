@@ -1,21 +1,21 @@
 <?php
 /**
- * Ressources Module
+ * Eco Module
  *
  * @author Tibor Katelbach <oceatoon@mail.com>
  * @version 0.1
  *
 */
 
-class RessourcesModule extends CWebModule {
+class EcoModule extends CWebModule {
 
 	private $_assetsUrl;
 
 	private $_version = "v0.1.0";
-	private $_versionDate = "10/01/2018";
-	private $_keywords = "ressources, needs, services, competence, exchange, module,opensource,CO,communecter";
-	private $_description = "Ressource , Needs, Services, Competence module for CO";
-	private $_pageTitle = "Ressource modules & CO Systems";
+	private $_versionDate = "18/05/2018";
+	private $_keywords = "economy, collaborative, classifieds, ressources, needs, services, competence, exchange, module,opensource,CO,communecter";
+	private $_description = "Economy module for CO";
+	private $_pageTitle = "Economy modules & CO Systems";
 
 	public function getVersion(){return $this->_version;}
 	public function getVersionDate(){return $this->_versionDate;}
