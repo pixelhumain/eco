@@ -1,6 +1,6 @@
 /* ******************
 CO.js
-RESSOURCE
+RESSOURCES
 ********************* */
 //var/www/dev/modules/co2/config/CO2/params.json:
 urlCtrl.loadableUrls[ "#ressources" ] = {

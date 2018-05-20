@@ -26,5 +26,5 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule, $this->module->
 
 <h1>Ressources Endpoints</h1>
 <script type="text/javascript">
-	alert();
+	
 </script>
