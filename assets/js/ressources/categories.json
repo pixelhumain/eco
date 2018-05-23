@@ -1,4 +1,8 @@
 {
+    "icon":"cubes",
+    "color":"vine",
+    "label":"Helping",
+    "type":"ressource",
     "sections" : {
         "need": { "label":"Need something", "labelFront" : "Needs", "key" : "need", "icon" : "angle-double-down"},
         "offer": {"label":"Offer something", "labelFront" : "Offers","key" : "offer","icon" : "angle-double-up"}
@@ -9,12 +13,12 @@
             "subcat" : {
                 "charity" : {"key": "charity", "label": "Charity", "icon" :"cook"},
                 "education" : { "key": "education", "label": "Education help", "icon" :"cook"},
-                "househelp" : { "key": "househelp", "label": "House help", "icon" :"cook"},
+                "househelp" : { "key": "househelp", "label": "Househelp", "icon" :"cook"},
                 "washing" : { "key": "washing","label": "Washing", "icon" :"cook"},
                 "gardening" : {"key": "gardening","label": "Gardening","icon" :"cook"},
                 "farming" : {"key": "farming","label": "Farming","icon" :"cook"},
                 "generalmaintenance" : {"key": "generalmaintenance","label": "General Maintenance","icon" :"cook" },
-                "childrencare" : {"key": "animalcare","label": "Animal care","icon" :"cook" },
+                "childrencare" : {"key": "animalcare","label": "Children care","icon" :"cook" },
                 "ederlycare" : {"key": "ederlycare","label": "Ederly care","icon" :"cook" },
                 "disabledcare" : {"key": "disabledcare","label": "Disabled care","icon" :"cook" },
                 "hostinghelp" : {"key": "hostinghelp","label": "Hosting help","icon" :"cook" },

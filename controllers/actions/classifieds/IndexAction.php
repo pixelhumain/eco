@@ -8,10 +8,10 @@ class IndexAction extends CAction
 
       	if( @Yii::app()->params["module"]["parent"] ){
       		$this->getController()->layout = "//layouts/directory";
-      		echo $this->getController()->render("co2.views.app.search",array("type"=>"classified"));
+      		echo $this->getController()->render("co2.views.app.search",array("type"=>"classifieds"));
       	}
       	else
-    		echo $this->getController()->renderPartial("co2.views.app.search",array("type"=>"classified"));
+    		echo $this->getController()->renderPartial("co2.views.app.search",array("type"=>"classifieds"));
     }
 }
 

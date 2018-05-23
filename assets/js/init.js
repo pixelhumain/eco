@@ -3,14 +3,14 @@ CO.js
 RESSOURCES
 ********************* */
 //var/www/dev/modules/co2/config/CO2/params.json:
-urlCtrl.loadableUrls[ "#ressources" ] = {
+urlCtrl.loadableUrls[ "#classifieds" ] = {
 	inMenu : true, 
     useHeader : true, 
     open : true, 
-    subdomain : "ressource", 
-    subdomainName : "Ressources",
-    hash : "#ressources.co.ressources",
-    icon : "cubes", 
+    subdomain : "classified", 
+    subdomainName : "Classifeds",
+    hash : "#classifieds.co.classifieds",
+    icon : "bullhorn", 
     mainTitle : "Moteur de Ressource <span class='text-red'>territoriales</span>",
     placeholderMainSearch : "Rechercher un ressource ...",
     lblBtnCreate : "Ajouter une ressource",
@@ -23,20 +23,34 @@ urlCtrl.loadableUrls["#ressources.co"] = {title:'RESSOURCES', icon : 'puzzle-pie
 urlCtrl.loadableUrls["#rsc"] = {"alias":"#ressources"};
 
 //co.js object types
+typeObj.classified = {  col:"classifieds",ctrl:"classified",color:"azure", icon:"bullhorn", titleClass : "azure", bgClass : "bgPerson"};
+typeObj.classifieds = { sameAs:"classified" };
+
 typeObj.ressource = {  col:"ressources",ctrl:"ressources",color:"vine", icon:"cube", titleClass : "bg-vine", bgClass : "bgPerson"};
 typeObj.ressources = { sameAs:"ressource" };
+typeObj.offers = {  col:"classifieds",ctrl:"classified",color:"azure", icon:"bullhorn", titleClass : "bg-azure", bgClass : "bgPerson"};
+typeObj.offer = { sameAs:"classified" };
+typeObj.job = {  col:"jobs",ctrl:"job",color:"brown", icon:"briefcase", titleClass : "bg-brown", bgClass : "bgPerson"};
+typeObj.jobs = { sameAs:"job" };
 
 //CO LANG
 co.rsc = {
     form : function() { dyFObj.openForm("ressource") },
     i : function () { co.ctrl.lbh("#"+userConnected.username+".view.directory.dir.ressources");},
 };
-
+co.shop = {
+    form : function() { dyFObj.openForm("classified") },
+    i : function () { co.ctrl.lbh("#"+userConnected.username+".view.directory.dir.classifieds");},
+};
+co.job = {
+    form : function() { dyFObj.openForm("jobs") },
+    i : function () { co.ctrl.lbh("#"+userConnected.username+".view.directory.dir.jobs");},
+};
 /* ******************
 CLASSIFIEDS
 ********************* */
 //var/www/dev/modules/co2/config/CO2/params.json:
-urlCtrl.loadableUrls[ "#annonces"] = {
+/*urlCtrl.loadableUrls[ "#annonces"] = {
             inMenu : true, 
             useHeader : true, 
             open : true, 
@@ -49,10 +63,10 @@ urlCtrl.loadableUrls[ "#annonces"] = {
             lblBtnCreate : "Create a classified ad",
             colorBtnCreate : "azure",
             module:"classifieds"
-};
+};*/
 
 //co.js object types
-typeObj.classified = { col:"classified",ctrl:"classified", titleClass : "bg-azure", color:"azure",    icon:"bullhorn",
+/*typeObj.classified = { col:"classified",ctrl:"classified", titleClass : "bg-azure", color:"azure",    icon:"bullhorn",
                    subTypes : [
                        //FR
                        "Technologie","Immobilier","Véhicules","Maison","Loisirs","Mode",
@@ -60,10 +74,7 @@ typeObj.classified = { col:"classified",ctrl:"classified", titleClass : "bg-azur
                        "Technology","Property","Vehicles","Home","Leisure","Fashion"
                        ]    
 };
-typeObj.classifieds = { sameAs:"classified"};
+typeObj.classifieds = { sameAs:"classified"};*/
 
 //CO LANG
-co.shop = {
-    form : function() { dyFObj.openForm("classified") },
-    i : function () { co.ctrl.lbh("#"+userConnected.username+".view.directory.dir.classifieds");},
-};
+

@@ -1,0 +1,88 @@
+{
+    "icon":"bulhorn",
+    "color":"azure",
+    "label":"Sales & Rent",
+    "type":"good",
+    "sections" : {
+        "forsale"   : { "label":"Sale", "labelFront":"For sale", "key" : "forsale", "icon" : "money"},
+        "forrent"   : { "label":"Rent", "labelFront":"For rent", "key" : "forrent", "icon" : "external-link"}
+    },
+    "sources":{
+         "co"   : { "label":"Communecter", "labelFront":"For sale", "key" : "co", "path" : ""},
+        "poleEmploi"   : { "label":"Pole Emploi", "labelFront":"For rent", "key" : "poleEmploi", "path" : ""}
+    },
+    "filters" : {
+         "technology"   : { "key":"technolgy", "label":"Technology", "icon" : "laptop", 
+            "subcat" : {
+                "tvVideo":{"key":"tvVideo", "label":"TV / Video", "icon":""},
+                "it":{"key":"it", "label":"IT", "icon":""},
+                "touchpads":{"key":"touchpads", "label":"Touchpads", "icon":""},
+                "telephony":{"key":"telephony", "label":"Telephony", "icon":""},
+                "camera":{"key":"camera", "label":"Camera", "icon":""},
+                "audiodevice":{"key":"audiodevice", "label":"Audio device", "icon":""}
+            }
+        },
+         "property"     : { "key":"property", "label":"Property"  , "icon" : "building"     , 
+            "subcat" : {
+                "house":{"key":"house", "label":"House", "icon":""},
+                "flat":{"key":"flat", "label":"Flat", "icon":""},
+                "ground":{"key":"ground", "label":"Ground", "icon":""},
+                "parking":{"key":"parking", "label":"Parking", "icon":""},
+                "office":{"key":"office", "label":"Office", "icon":""}
+            }
+        },
+        "vehicles"     : { "key":"vehicles", "label":"Vehicles"  , "icon" : "car"          , 
+            "subcat" : {
+                "car":{"key":"car", "label":"Car", "icon":""},
+                "suv":{"key":"suv", "label":"SUV", "icon":""},
+                "utility":{"key":"utility", "label":"Utility", "icon":""},
+                "moto":{"key":"moto", "label":"Moto", "icon":""},
+                "scooter":{"key":"scooter", "label":"Scooter", "icon":""},
+                "boat":{"key":"boat", "label":"Boat", "icon":""},
+                "smallcar":{"key":"smallcar", "label":"Small car", "icon":""},
+                "bikes":{"key":"bikes", "label":"Bikes", "icon":""},
+                "carequipment":{"key":"carequipment", "label":"Car equipment", "icon":""},
+                "2wheeledequipment":{"key":"2wheeledequipment", "label":"2-wheeled equipment", "icon":""},
+                "boatequipment":{"key":"boatequipment", "label":"Boat equipment", "icon":""},
+                "bikeequipment":{"key":"bikeequipment", "label":"Bike equipment", "icon":""} 
+             }
+         },
+         "home"         : { "key":"home", "label":"Home"      , "icon" : "home"         , 
+            "subcat" : {
+                "householdappliances":{"key":"householdappliances", "label":"Household appliances", "icon":""},
+                "furniture":{"key":"furniture", "label":"Furniture", "icon":""},
+                "babyequipment":{"key":"babyequipment", "label":"Baby equipment", "icon":""},
+                "animals":{"key":"animals", "label":"Animals", "icon":""},
+                "various":{"key":"various", "label":"Various", "icon":""}
+            }
+        },
+         "leisure"      : { "key":"leisure", "label":"Leisure"   , "icon" : "smile-o"      , 
+            "subcat" : {
+                "sports":{"key":"sports", "label":"Sports", "icon":""},
+                "musicalinstrument":{"key":"musicalinstrument", "label":"Musical instrument", "icon":""},
+                "soundsystem":{"key":"soundsystem", "label":"Sound system", "icon":""},
+                "cddvd":{"key":"cddvd", "label":"CD / DVD", "icon":""},
+                "toys":{"key":"toys", "label":"Toys", "icon":""},
+                "games":{"key":"games", "label":"Games", "icon":""},
+                "bookscomics":{"key":"bookscomics", "label":"Books / Comics", "icon":""},
+                "collections":{"key":"collections", "label":"Collections", "icon":""},
+                "diy":{"key":"diy", "label":"DIY", "icon":""},
+                "gardening":{"key":"gardening", "label":"Gardening", "icon":""},
+                "artdeco":{"key":"artdeco", "label":"Art / Deco", "icon":""},
+                "modelmaking":{"key":"modelmaking", "label":"Model making", "icon":""},
+                "childcare":{"key":"childcare", "label":"Childcare", "icon":""},
+                "animals":{"key":"animals", "label":"Animals", "icon":""},
+                "various":{"key":"various", "label":"Various", "icon":""}
+            }
+        },
+         "fashion"      : { "key":"fashion", "label":"Fashion"   , "icon" : "shopping-bag" , 
+            "subcat" : {
+                "clothes":{"key":"clothes", "label":"Clothes", "icon":""},
+                "shoes":{"key":"shoes", "label":"Shoes", "icon":""},
+                "accessories":{"key":"accessories", "label":"Accessories", "icon":""},
+                "watches":{"key":"watches", "label":"Watches", "icon":""},
+                "jewels":{"key":"jewels", "label":"Jewels", "icon":""}
+            }
+        }
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "icon":"briefcase",
+    "color":"brown",
+    "type":"job",
+    "label":"Jobs",
+    "sections" : {
+        "need": { "label":"Search in offers", "labelFront" : "Needs", "key" : "need", "icon" : "angle-double-down"},
+        "offer": {"label":"Recruit someone", "labelFront" : "Offers","key" : "offer","icon" : "angle-double-up"}
+    },
+    "filters":{
+        "offer" : { "label":"Job offers", "key" : "offer", "icon" : "briefcase"},
+        "training" : { "label":"Training", "key" : "training", "icon" : "briefcase"},
+        "internship" : { "label":"Internship", "key" : "internship", "icon" : "briefcase"}
+    },
+    "subcat":{
+        "purComptManagement" : {"icon":"briefcase", "key":"purComptManagement", "poleEmploiKey":"gestionComptabilite", "label":"Purchase-Comptability-Management"},
+        "artsCrafts":{"label":"Arts-Crafts", "key":"artsCrafts", "poleEmploiKey":"artsArtisanat", "icon":"paint-brush"},
+        "bankInsurance":{"label":"Bank-Insurance", "key":"bankInsurance", "poleEmploiKey":"banqueAssuranceImmobilier",  "icon":"money"},
+        "spectacle":{"label":"Spectacle", "key":"spectacle", "poleEmploiKey":"spectacle","icon":"star"},
+        "sport":{"label":"Sport", "key":"sport", "poleEmploiKey":"","icon":"futbol-o"},
+        "buildingPublicWorks":{"key":"buildingPublicWorks", "label":"Building-Public_works","key":"bankInsurance", "poleEmploiKey":"constructionBatimentsEtTravauxPublics", "icon":"building"},
+        "tradeSales": {"label":"Trade, sales, marketing, ", "key":"tradeSales", "poleEmploiKey":"commerceVenteMarketing","icon":"area-chart"},
+        "communicationMultimedia":{"label":"Communication-Multimedia", "key":"communicationMultimedia", "poleEmploiKey":"communicationMedias", "icon":"television"},
+        "environment":{"label":"Environment, natural spaces", "key":"environment", "poleEmploiKey":"environnement", "icon":"tree"},
+        "agriculture":{"label":"Agriculture", "key":"agriculture", "poleEmploiKey":"agriculture", "icon":"shopping-basket"},
+        "fishing":{"label":"Fishing & hunting", "key":"fishing", "poleEmploiKey":"commerceVenteMarketing", "icon":"tint"},
+        "animalCare":{"label":"Animals care", "key":"animalCare", "poleEmploiKey":"commerceVenteMarketing", "icon":"medkit"},
+        "hotelCatering":{"label":"Hotel business, catering", "key":"hotelCatering", "poleEmploiKey":"hotellerieRestaurationTourismeAnimation","icon":"hotel"},
+        "tourismAnimation":{"label":"Tourism, animation", "key":"tourismAnimation", "poleEmploiKey":"hotellerieRestaurationTourismeAnimation","icon":"info-circle"},
+        "property":{"label":"Property", "key":"property", "poleEmploiKey":"banqueAssuranceImmobilier","icon":"building-o"},
+        "industry":{"label":"Industry", "key":"industry", "poleEmploiKey":"industrie","icon":"industry"},
+        "education":{"label":"Eduction, training", "key":"education", "poleEmploiKey":"enseignementFormation","icon":"book"},
+        "itTelecommunication":{"label":"IT-Telecommunication", "key":"itTelecommunication", "poleEmploiKey":"informatiqueEtNouvellesTechnologies","icon":"wifi"},
+        "installationMaintenance":{"label":"Installation-Maintenance", "key":"installationMaintenance", "poleEmploiKey":"installationMaintenance","icon":"wrench"},
+        "humanRessource":{"label":"Human ressources", "key":"humanRessource", "poleEmploiKey":"ressourcesHumaines","icon":"group"},
+        "health":{"label":"Health", "key":"health", "poleEmploiKey":"sante","icon":"stethoscope"},
+        "assistanatSecretariat ":{"label":"Secretariat-Assistantship", "key":"assistanatSecretariat ", "poleEmploiKey":"assistanatSecretariat","icon":"support"},
+        "personalServices":{"label":"personalServices", "key":"personalServices", "poleEmploiKey":"servicesALaPersonne","icon":"blind"},
+        "publicService":{"label":"Public services", "key":"publicService", "poleEmploiKey":"fonctionPublique","icon":"university"},
+        "rDEngineering":{"label":"R&D, engineering", "key":"rDEngineering", "poleEmploiKey":"rDIngenierie","icon":"university"},
+        "transportLogistic":{"label":"Transport-Logistic", "key":"transportLogistic", "poleEmploiKey":"transportLogistique","icon":"truck"},
+        "armySecurity":{"label": "Army, security", "key": "armySecurity", "poleEmploiKey":"armeeSecurite","icon":"guard"}
+    }
+}

@@ -19,9 +19,9 @@ dynForm = {
 	    				breadCrumbTxt = breadCrumbTxt+" > "+tradCategory[data.subtype]; 
 	    			$(".breadcrumbcustom").html( "<h4>"+breadCrumbTxt+"</h4>" );
 					$(".sectionBtntagList").hide();
-					$(".typeBtntagList").hide();
+					$(".categoryBtntagList").hide();
 	    		} else
-	    			$(".typeBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form, .deviseselect").hide();
+	    			$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form, .deviseselect").hide();
 	    	
 	    		$("#devise").val(deviseDefault);
 
@@ -45,8 +45,8 @@ dynForm = {
 		    },*/
 	    },
 	    beforeBuild : function(){
-	    	dyFObj.setMongoId('classified',function(){
-	    		uploadObj.gotoUrl = (contextData != null && contextData.type && contextData.id  ) ? "#page.type."+contextData.type+".id."+contextData.id+".view.directory.dir.classified" : location.hash;
+	    	dyFObj.setMongoId('classifieds',function(){
+	    		uploadObj.gotoUrl = (contextData != null && contextData.type && contextData.id  ) ? "#page.type."+contextData.type+".id."+contextData.id+".view.directory.dir.classifieds" : location.hash;
 	    	});
 	    },
 	    beforeSave : function(){
@@ -66,6 +66,7 @@ dynForm = {
 		    	$('#ajaxFormModal #parentId').val(userId);
 		    	$("#ajaxFormModal #parentType").val( "citoyens" ); 
 		    }
+		    $("#ajaxFormModal #parentType").val("goods");
 	    },
 	    afterSave : function(){
 			if( $('.fine-uploader-manual-trigger').fineUploader('getUploads').length > 0 )
@@ -88,10 +89,10 @@ dynForm = {
 
 	    		$(".breadcrumbcustom").html( "");
 	    		$(".sectionBtntagList").show(); 
-	    		$(".typeBtntagList").hide(); 
+	    		$(".categoryBtntagList").hide(); 
 	    		$(".subtypeSection").html("");
 	    		$(".subtypeSectioncustom").show();
-	    		$(".typeBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, .deviseselect").hide();
+	    		$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, .deviseselect").hide();
 	    		$("#btn-submit-form").hide(); 
 	    	}, 
 	    	initTypeBtn : function () { 
@@ -102,7 +103,7 @@ dynForm = {
             		$("#ajaxFormModal #type").val( ( $(this).hasClass('active') ) ? $(this).data('key') : "" );
             		
             		$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a>  "+$(".sectionBtn.active").data('tag')+" > "+$(".typeBtn.active").data('tag')+"</h4>" );
-            		$(".typeBtntagList").hide();
+            		$(".categoryBtntagList").hide();
 
             		//$(".typeBtn:not(.active)").hide();
             		$("#ajaxFormModal #subtype").val("");
@@ -164,12 +165,12 @@ dynForm = {
                 label : tradDynForm.whichkindofclassified+" ? ",
 	            inputType : "tagList",
                 placeholder : "Choisir un type",
-                list : modules.classifieds.categories.sections,
+                list : modules.classifieds.goods.categories.sections,
                 trad : tradCategory,
                 init : function(){
                 	$(".sectionBtn").off().on("click",function()
 	            	{
-	            		$(".typeBtntagList").show();
+	            		$(".categoryBtntagList").show();
 	            		$(".sectionBtn").removeClass("active btn-dark-blue text-white");
 	            		$( "."+$(this).data('key')+"Btn" ).toggleClass("active btn-dark-blue text-white");
 	            		$("#ajaxFormModal #section").val( ( $(this).hasClass('active') ) ? $(this).data('key') : "" );
@@ -177,20 +178,20 @@ dynForm = {
 						var sectionKey = $(this).data('key');
 						//alert(sectionKey);
 						var what = { title : tradDynForm.inwhichcategoryforclassified+" ?", 
-				                         icon : modules.classifieds.categories.sections[sectionKey].icon }
+				                         icon : modules.classifieds.goods.categories.sections[sectionKey].icon }
 						
-						if( jsonHelper.notNull( "modules.classifieds.categories.sections."+sectionKey+".filters" ) ){
+						if( jsonHelper.notNull( "modules.classifieds.goods.categories.sections."+sectionKey+".filters" ) ){
 				            //alert('build btns menu'+modules.classifieds.categories.sections[sectionKey].filters);
-				            modules.classifieds.categories.currentLeftFilters = modules.classifieds.categories.sections[sectionKey].filters;
-				            var filters = classified[modules.classifieds.categories.currentLeftFilters]; 
-				            directory.sectionFilter( filters, ".typeBtntagList",what,'btn');
+				            modules.classifieds.goods.categories.currentLeftFilters = modules.classifieds.goods.categories.sections[sectionKey].filters;
+				            var filters = classified[modules.classifieds.goods.categories.currentLeftFilters]; 
+				            directory.sectionFilter( filters, ".categoryBtntagList",what,'btn');
 				            dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn();
 				        }
-				        else if( modules.classifieds.categories.currentLeftFilters != null ) {
+				        else if( modules.classifieds.goods.categories.currentLeftFilters != null ) {
 				            //alert('rebuild common list'); 
-				            directory.sectionFilter( modules.classifieds.categories.filters, ".typeBtntagList",what,'btn');
+				            directory.sectionFilter( modules.classifieds.goods.categories.filters, ".categoryBtntagList",what,'btn');
 				            dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn()
-				            modules.classifieds.categories.currentLeftFilters = null;
+				            modules.classifieds.goods.categories.currentLeftFilters = null;
 				        }
 
 						$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a> "+$(this).data('tag')+"</h4>");
@@ -199,18 +200,18 @@ dynForm = {
 	            }
             },
             section : dyFInputs.inputHidden(),
-	        typeBtn :{
+	        categoryBtn :{
                 label : tradDynForm.inwhichcategoryforclassified+" ? ",
 	            inputType : "tagList",
                 placeholder : "Choisir une catégorie",
-                list : modules.classifieds.categories.filters,
+                list : modules.classifieds.goods.categories.filters,
                 trad:tradCategory,
                 init : function(){
-                	modules.classifieds.categories.currentLeftFilters = null;
+                	modules.classifieds.goods.categories.currentLeftFilters = null;
                 	dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn();
 	            }
             },
-            type : dyFInputs.inputHidden(),
+            category : dyFInputs.inputHidden(),
             subtypeSection : {
                 inputType : "custom",
                 html:"<div class='subtypeSection'></div>"
@@ -224,6 +225,7 @@ dynForm = {
             contactInfo : dyFInputs.inputText(tradDynForm.contactinfo, tradDynForm.telemail+" ..."),
             location : dyFInputs.location,
             tags : dyFInputs.tags(),
+            type : dyFInputs.inputHidden(),
             parentId : dyFInputs.inputHidden(),
             parentType : dyFInputs.inputHidden(),
 	    }
