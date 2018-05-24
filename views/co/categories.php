@@ -40,6 +40,19 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
   margin-bottom: 5px;
   margin-top: 5px;
 }
+.keycat:hover{
+  width:inherit !important;
+  text-overflow: inherit !important;
+  white-space: inherit !important;
+  overflow: inherit !important;
+  max-width: inherit !important;
+  display: inline-block;
+  z-index: 10000;
+}
+.btn-select-category:hover, .btn-select-category.active, .btn-select-section:hover, .btn-select-section.active {
+    background-color: #2C3E50!important;
+    color: #fff!important;
+    border-color: transparent!important;
 </style>
 
 <div class="col-xs-12 col-sm-12 col-md-12" id="sectionMenu">
