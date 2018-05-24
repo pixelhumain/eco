@@ -48,7 +48,7 @@ class Classified {
             "controller"   => self::CONTROLLER,
             "module"   => self::MODULE,
 			"init"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/init.js" ,
-			"form"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/".$context."dynForm.js" ,
+			"form"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/".$context."/dynForm.js" ,
             "categories" => CO2::getModuleContextList(self::MODULE, "categories", $context),
             "deviseTheme" 	=> array(
             	"all" => "All",

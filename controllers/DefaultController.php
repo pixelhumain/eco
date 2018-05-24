@@ -21,14 +21,16 @@ class DefaultController extends CommunecterController {
     /*if( @Yii::app()->params["module"]["parent"] && !@Yii::app()->params["module"]["overwrite"][Yii::app()->controller->id][ Yii::app()->controller->action->id ] ){
       $this->redirect(Yii::app()->createUrl( "/".Yii::app()->params["module"]["parent"]."/".Yii::app()->controller->id."/".Yii::app()->controller->action->id ));
     }*/
-    
-    	if(Yii::app()->request->isAjaxRequest)
+      $this->layout = "//layouts/directory";
+      echo $this->render("co2.views.app.search",array("type"=>"classifieds"));
+      
+    /*	if(Yii::app()->request->isAjaxRequest)
         echo $this->renderPartial("index");
       else
       {
         $this->layout = "//layouts/empty";
         $this->render("index");
-      }
+      }*/
   }
 
   public function actionDoc($md="README") 

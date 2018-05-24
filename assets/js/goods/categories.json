@@ -8,8 +8,8 @@
         "forrent"   : { "label":"Rent", "labelFront":"For rent", "key" : "forrent", "icon" : "external-link"}
     },
     "sources":{
-         "co"   : { "label":"Communecter", "labelFront":"For sale", "key" : "co", "path" : ""},
-        "poleEmploi"   : { "label":"Pole Emploi", "labelFront":"For rent", "key" : "poleEmploi", "path" : ""}
+         "co"   : { "label":"Communecter", "labelFront":"For sale", "key" : "co", "path" : "/images/logos/logo-min.png"},
+        "poleEmploi"   : { "label":"Pole Emploi", "labelFront":"For rent", "key" : "poleEmploi", "path" : "/images/logos/logo_pole_emploi.png"}
     },
     "filters" : {
          "technology"   : { "key":"technolgy", "label":"Technology", "icon" : "laptop", 
