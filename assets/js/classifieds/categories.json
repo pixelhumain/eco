@@ -2,7 +2,7 @@
     "icon":"bulhorn",
     "color":"azure",
     "label":"Sales & Rent",
-    "type":"good",
+    "type":"classifieds",
     "sections" : {
         "forsale"   : { "label":"Sale", "labelFront":"For sale", "key" : "forsale", "icon" : "money"},
         "forrent"   : { "label":"Rent", "labelFront":"For rent", "key" : "forrent", "icon" : "external-link"}

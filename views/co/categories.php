@@ -143,7 +143,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
 <script type="text/javascript">
   var classifieds = modules.classifieds;
   jQuery(document).ready(function() {
-    directory.sectionFilter(classifieds.goods.categories);
+    directory.sectionFilter(classifieds.categories);
   });
 </script>
   

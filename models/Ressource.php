@@ -63,18 +63,6 @@ class Ressource {
 	    "created" => array("name" => "created"),
 	);
 
-	//used in initJs.php for the modules definition
-	public static function getConfig(){
-		return array(
-			"collection"    => self::COLLECTION,
-            "controller"   	=> self::CONTROLLER,
-            "module"   		=> self::MODULE,
-			"init"   		=> Yii::app()->getModule( self::MODULE )->assetsUrl."/js/init.js" ,
-			"form"   		=> Yii::app()->getModule( self::MODULE )->assetsUrl."/js/dynForm.js" ,
-            "categories" 	=> CO2::getModuleContextList(self::MODULE,"categories"),
-            "lbhp"			=> true
-		);
-	}
 
 	/**
 	 * get all Ressource details of an element

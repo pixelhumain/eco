@@ -3,7 +3,7 @@
 class Classified {
 	const COLLECTION = "classified";
 	const CONTROLLER = "classified";
-	const MODULE = "classifieds";
+	const MODULE = "eco";
 	const ICON = "fa-bullhorn";
 	
 	//TODO Translate
@@ -58,20 +58,23 @@ class Classified {
 	    );
 
 	//used in initJs.php for the modules definition
-	public static function getConfig(){
+	public static function getConfig($context=null){
 		return array(
 			"collection"    => self::COLLECTION,
             "controller"   => self::CONTROLLER,
             "module"   => self::MODULE,
-			"init"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/classifieds/init.js" ,
-			"form"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/classifieds/dynForm.js" ,
-            "categories" => CO2::getModuleContextList(self::MODULE,"categories"),
-            "deviseTheme" 	=> array("€" => "€",
-					    			 "Ğ1" => "Ğ1",
-					                 "£" => "£",
-					                 "$" => "$",
-					                 "CFP" => "CFP"),
-    		"deviseDefault" => "€",
+			"init"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/init.js" ,
+			"form"   => Yii::app()->getModule( self::MODULE )->assetsUrl."/js/".$context."/dynForm.js" ,
+            "categories" => CO2::getModuleContextList(self::MODULE, "categories", $context),
+            "deviseTheme" 	=> array(
+            	"all" => "All",
+				"€" => "€",
+				"Ğ1" => "Ğ1",
+				"£" => "£",
+				"$" => "$",
+	            "CFP" => "CFP"
+	        ),
+    		"deviseDefault" => "All",
     		"lbhp" => true
 		);
 	}
