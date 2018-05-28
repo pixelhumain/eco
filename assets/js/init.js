@@ -28,8 +28,6 @@ typeObj.classifieds = { sameAs:"classified" };
 
 typeObj.ressource = {  col:"ressources",ctrl:"ressources",color:"vine", icon:"cube", titleClass : "bg-vine", bgClass : "bgPerson"};
 typeObj.ressources = { sameAs:"ressource" };
-typeObj.goods = {  col:"classifieds",ctrl:"classified",color:"azure", icon:"bullhorn", titleClass : "bg-azure", bgClass : "bgPerson"};
-typeObj.good = { sameAs:"classified" };
 typeObj.job = {  col:"jobs",ctrl:"job",color:"brown", icon:"briefcase", titleClass : "bg-brown", bgClass : "bgPerson"};
 typeObj.jobs = { sameAs:"job" };
 

@@ -6,7 +6,7 @@
   </div>
   <div class="col-xs-2" >
   	<img class="img-responsive" src='<?php echo $this->module->assetsUrl; ?>/images/custom/leport/LOGO.jpg'> 
-  	<h2>Un ville Dynamique</h2>
+  	<h2>Une ville Dynamique</h2>
   	<p style="overflow-y: hidden;height: 200px;">
   	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -16,3 +16,34 @@
   	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
   </div>
 </div>
+
+- prevention à al fraude 
+	- approprio demande d'infos 
+pole 
+	un vision du marché de l'emploie
+	web cv video 
+	information marché du travail 
+		photo instant T du marché de aujourd'hui demain 
+			combien de jeune portois déscolarisé
+		statisitque 
+			FB, twitter
+Mission Local 
+	pas de publication 
+	remplissage et partage en interne seulemen 
+	dispositif d'accompagnement , opporntunié 
+	e-lectronisme 
+CMA 
+	events
+	offres apprentissage
+	validation des données
+	ouverture de l'information 
+
+departement 
+	comm
+
+manque 
+	centre de formation contrat pro 
+	medef : vos travail 974 
+
+
+

@@ -66,7 +66,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
   <div class="col-md-10 col-sm-9">
     <div class="col-md-2 col-sm-4 col-xs-6 no-padding">
         <button class="btn btn-default col-md-12 col-sm-12 padding-10 bold elipsis btn-select-type-anc" 
-              data-type-anc="<?php echo @$section["label"]; ?>" data-key="goods" 
+              data-type-anc="<?php echo @$section["label"]; ?>" data-key="classifieds" 
               data-type="classifieds">
         <i class="fa fa-money hidden-xs"></i> 
         <?php echo Yii::t("category", "Sales & rents"); ?>

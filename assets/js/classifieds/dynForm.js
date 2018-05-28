@@ -66,7 +66,7 @@ dynForm = {
 		    	$('#ajaxFormModal #parentId').val(userId);
 		    	$("#ajaxFormModal #parentType").val( "citoyens" ); 
 		    }
-		    $("#ajaxFormModal #parentType").val("goods");
+		    $("#ajaxFormModal #parentType").val("classifieds");
 	    },
 	    afterSave : function(){
 			if( $('.fine-uploader-manual-trigger').fineUploader('getUploads').length > 0 )
