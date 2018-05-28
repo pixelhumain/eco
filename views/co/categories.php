@@ -55,7 +55,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
     border-color: transparent!important;
 </style>
 
-<div class="col-xs-12 col-sm-12 col-md-12" id="sectionMenu">
+<!--<div class="col-xs-12 col-sm-12 col-md-12" id="sectionMenu">
   <div class="col-md-2 col-sm-3">
     <button class="btn bg-white margin-left-5 padding-10 btn-select-type-anc pull-right" 
             data-type="classifieds" data-type-anc=""  data-key="all">
@@ -90,9 +90,9 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
     </div>
   </div>
   <hr class="col-md-12 col-sm-12 col-xs-12 margin-top-10 margin-bottom-10 no-padding" id="before-section-result">
-</div>
+</div>-->
 
-<div class="col-md-10 col-sm-9 col-xs-12 no-padding pull-right" id="section-price">
+<!--<div class="col-md-10 col-sm-9 col-xs-12 no-padding pull-right" id="section-price">
     <div class="form-group col-md-4 col-sm-4 col-xs-6">
         <label class="col-md-12 col-sm-12 col-xs-12 text-left control-label no-padding" for="sectionBtn">
           <i class="fa fa-angle-down"></i> <?php echo Yii::t("common","Min price") ?>
@@ -130,29 +130,29 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
       </button>
     </div>  
      <hr class="col-md-12 col-sm-12 col-xs-12 no-padding" id="before-section-result" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">                      
-</div>
+</div>-->
 
-<div class="col-md-2 col-sm-3 col-xs-8 text-right font-montserrat" id="sub-menu-left">
+<!--<div class="col-md-2 col-sm-3 col-xs-8 text-right font-montserrat" id="sub-menu-left">
   <div class="col-md-12 col-sm-12 col-xs-12 no-padding text-right sourcesInterrop font-montserrat">
     <div class="title"><h4>Sources</h4></div>
     <hr class="col-md-12 col-sm-12 col-xs-12 no-padding">
     <div class="list"></div>
-    <!--<hr class="col-md-12 col-sm-12 col-xs-12 no-padding" id="before-section-result" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">-->
+    <hr class="col-md-12 col-sm-12 col-xs-12 no-padding" id="before-section-result" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12 no-padding margin-top-15 text-right sectionsFilters font-montserrat">
     <div class="title"><h4>Sections</h4></div>
     <hr class="col-md-12 col-sm-12 col-xs-12 no-padding">
     <div class="list"></div>
-    <!--<hr class="col-md-12 col-sm-12 col-xs-12 no-padding" id="before-section-result" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">-->
+    <hr class="col-md-12 col-sm-12 col-xs-12 no-padding" id="before-section-result" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">
   </div>
   <div class="col-md-12 col-sm-12 col-xs-12 no-padding margin-top-15 text-right subsub classifiedFilters font-montserrat">
     <div class="title"><h4>Categories</h4></div>
     <hr class="col-md-12 col-sm-12 col-xs-12 no-padding">
     <div class="list"></div>
-    <!--<hr class="col-md-12 col-sm-12 col-xs-12 no-padding" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">-->
+    <hr class="col-md-12 col-sm-12 col-xs-12 no-padding" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">
   </div>
-</div>
-<div class="no-padding col-md-10 col-sm-9 col-xs-12 text-left pull-right headerSearchContainer"></div>
+</div>-->
+<div class="no-padding col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 col-xs-12 text-left pull-right headerSearchContainer"></div>
 <script type="text/javascript">
   var classifieds = modules.classifieds;
   jQuery(document).ready(function() {

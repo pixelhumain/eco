@@ -33,6 +33,7 @@ if( $this->layout != "//layouts/empty"){
 <script type="text/javascript">
 
 $(document).ready(function() { 
+	alert("empenfezjfezj");
 	getAjax('', baseUrl+'/<?php  echo $this->module->id;?>/default/doc',
 		function(data){ 
 			descHtml = dataHelper.markdownToHtml(data); 
