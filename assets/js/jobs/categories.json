@@ -3,6 +3,7 @@
     "color":"brown",
     "type":"job",
     "label":"Jobs",
+    "labelFront":"joboffers",
     "sections" : {
         "need": { "label":"Search in offers", "labelFront" : "isearchajob", "key" : "need", "icon" : "angle-double-down"},
         "offer": {"label":"Recruit someone", "labelFront" : "irecruit","key" : "offer","icon" : "angle-double-up"}
