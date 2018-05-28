@@ -165,7 +165,7 @@ dynForm = {
                 label : tradDynForm.whichkindofclassified+" ? ",
 	            inputType : "tagList",
                 placeholder : "Choisir un type",
-                list : modules.classifieds.goods.categories.sections,
+                list : modules.classifieds.categories.sections,
                 trad : tradCategory,
                 init : function(){
                 	$(".sectionBtn").off().on("click",function()
@@ -178,20 +178,20 @@ dynForm = {
 						var sectionKey = $(this).data('key');
 						//alert(sectionKey);
 						var what = { title : tradDynForm.inwhichcategoryforclassified+" ?", 
-				                         icon : modules.classifieds.goods.categories.sections[sectionKey].icon }
+				                         icon : modules.classifieds.categories.sections[sectionKey].icon }
 						
-						if( jsonHelper.notNull( "modules.classifieds.goods.categories.sections."+sectionKey+".filters" ) ){
+						if( jsonHelper.notNull( "modules.classifieds.categories.sections."+sectionKey+".filters" ) ){
 				            //alert('build btns menu'+modules.classifieds.categories.sections[sectionKey].filters);
-				            modules.classifieds.goods.categories.currentLeftFilters = modules.classifieds.goods.categories.sections[sectionKey].filters;
-				            var filters = classified[modules.classifieds.goods.categories.currentLeftFilters]; 
+				            modules.classifieds.categories.currentLeftFilters = modules.classifieds.categories.sections[sectionKey].filters;
+				            var filters = classified[modules.classifieds.categories.currentLeftFilters]; 
 				            directory.sectionFilter( filters, ".categoryBtntagList",what,'btn');
 				            dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn();
 				        }
-				        else if( modules.classifieds.goods.categories.currentLeftFilters != null ) {
+				        else if( modules.classifieds.categories.currentLeftFilters != null ) {
 				            //alert('rebuild common list'); 
-				            directory.sectionFilter( modules.classifieds.goods.categories.filters, ".categoryBtntagList",what,'btn');
+				            directory.sectionFilter( modules.classifieds.categories.filters, ".categoryBtntagList",what,'btn');
 				            dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn()
-				            modules.classifieds.goods.categories.currentLeftFilters = null;
+				            modules.classifieds.categories.currentLeftFilters = null;
 				        }
 
 						$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a> "+$(this).data('tag')+"</h4>");
@@ -204,10 +204,10 @@ dynForm = {
                 label : tradDynForm.inwhichcategoryforclassified+" ? ",
 	            inputType : "tagList",
                 placeholder : "Choisir une catégorie",
-                list : modules.classifieds.goods.categories.filters,
+                list : modules.classifieds.categories.filters,
                 trad:tradCategory,
                 init : function(){
-                	modules.classifieds.goods.categories.currentLeftFilters = null;
+                	modules.classifieds.categories.currentLeftFilters = null;
                 	dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn();
 	            }
             },
