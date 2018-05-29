@@ -154,9 +154,10 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
 </div>-->
 <div class="no-padding col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 col-xs-12 text-left pull-right headerSearchContainer"></div>
 <script type="text/javascript">
-  var classifieds = modules.classifieds;
+  //var classifieds = modules.classifieds;
   jQuery(document).ready(function() {
-    directory.sectionFilter(classifieds.categories);
+    $(".dropdown-section, .dropdown-category, .dropdown-subType").hide();
+    //directory.sectionFilter(classifieds.categories);
   });
 </script>
   
