@@ -66,7 +66,7 @@ dynForm = {
 		    	$('#ajaxFormModal #parentId').val(userId);
 		    	$("#ajaxFormModal #parentType").val( "citoyens" ); 
 		    }
-		    $("#ajaxFormModal #parentType").val("classifieds");
+		    $("#ajaxFormModal #type").val("classifieds");
 	    },
 	    afterSave : function(){
 			if( $('.fine-uploader-manual-trigger').fineUploader('getUploads').length > 0 )
@@ -96,27 +96,30 @@ dynForm = {
 	    		$("#btn-submit-form").hide(); 
 	    	}, 
 	    	initTypeBtn : function () { 
-	    		$(".typeBtn").off().on("click",function(){
-	            		
-            		$(".typeBtn").removeClass("active btn-dark-blue text-white");
+	    		$(".categoryBtn").off().on("click",function(){
+            		$(".categoryBtn").removeClass("active btn-dark-blue text-white");
             		$( "."+$(this).data('key')+"Btn" ).toggleClass("active btn-dark-blue text-white");
-            		$("#ajaxFormModal #type").val( ( $(this).hasClass('active') ) ? $(this).data('key') : "" );
+            		$("#ajaxFormModal #category").val( ( $(this).hasClass('active') ) ? $(this).data('key') : "" );
             		
-            		$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a>  "+$(".sectionBtn.active").data('tag')+" > "+$(".typeBtn.active").data('tag')+"</h4>" );
+            		$(".breadcrumbcustom").html(
+            			"<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a>  "
+            				+$(".sectionBtn.active").data('tag')+" > "+
+            				$(".categoryBtn.active").data('tag')+
+            			"</h4>");
             		$(".categoryBtntagList").hide();
 
             		//$(".typeBtn:not(.active)").hide();
             		$("#ajaxFormModal #subtype").val("");
             		fieldHTML = "";
-            		var filt = (modules.classifieds.categories.currentLeftFilters != null ) 
-            					? classified[modules.classifieds.categories.currentLeftFilters] 
-            					: modules.classifieds.categories.filters; 
-            		if( filt[ $(this).data('key') ]["subcat"].length >= 1 )
+            		var filt = //(modules.classifieds.categories.currentLeftFilters != null ) 
+            					//? classified[modules.classifieds.categories.currentLeftFilters] 
+            					modules.classifieds.categories.filters;
+            		if( Object.keys(filt[ $(this).data('key') ]["subcat"]).length >= 1 )
             		{
 	            		$.each(filt[ $(this).data('key') ]["subcat"], function(k,v) { 
 	            			mylog.log(">>>> click type BTn" , k ,v, v.key,tradCategory[v.key]);
 	            			fieldHTML += '<div class="col-md-6 padding-5">'+
-	            							'<a class="btn tagListEl subtypeBtn '+tradCategory[k]+'Btn " data-tag="'+tradCategory[v]+'"  data-key="'+v+'" href="javascript:;">'+tradCategory[v]+'</a>' +
+	            							'<a class="btn tagListEl subtypeBtn '+tradCategory[k]+'Btn " data-tag="'+tradCategory[k]+'"  data-key="'+k+'" href="javascript:;">'+tradCategory[k]+'</a>' +
 	    									//'<a class="btn tagListEl subtypeBtn '+k+'Btn " data-tag="'+v.key+'"  data-lbl="'+tradCategory[v.key]+'" href="javascript:;">'+tradCategory[v.key]+'</a>' +
 	            						"</div>";
 	            		});
@@ -142,7 +145,7 @@ dynForm = {
 		            		//$(".subtypeBtn:not(.active)").hide();
 
 		            		$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a> "+
-		            										$(".sectionBtn.active").data('tag')+" > "+$(".typeBtn.active").data('tag')+" > "+$(".subtypeBtn.active").data('tag')+"</h4>" );
+		            										$(".sectionBtn.active").data('tag')+" > "+$(".categoryBtn.active").data('tag')+" > "+$(".subtypeBtn.active").data('tag')+"</h4>" );
 		            		$(".subtypeSectioncustom").hide();
 		            		dyFObj.canSubmitIf();
 						});

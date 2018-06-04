@@ -6,11 +6,11 @@ dynForm = {
 	    onLoads : {
 	    	//pour creer un subevnt depuis un event existant
 	    	sub : function(){
-	    		dyFInputs.setSub("bg-azure");
+	    		dyFInputs.setSub("bg-yellow-k");
 	    	}, 
 	    	onload : function(data){
 	    		$("#ajax-modal .modal-header").removeClass("bg-dark bg-purple bg-red bg-azure bg-green bg-green-poi bg-orange bg-yellow bg-blue bg-turq bg-url")
-							  					  .addClass("bg-azure");
+							  					  .addClass("bg-yellow-k");
 
 	    		if(data && data.section){
 	    			$("#ajaxFormModal #id").val(data.id);
@@ -29,7 +29,7 @@ dynForm = {
 	    		} 
 	    		$('#ajaxFormModal #parentId').val(contextDataId);
 	    		$("#ajaxFormModal #parentType").val( contextDataType ); 
-	    		$("#ajaxFormModal #category").val( "jobs" );
+	    		$("#ajaxFormModal #type").val( "jobs" );
 	    	},
 	    },
 
@@ -91,7 +91,7 @@ dynForm = {
                 label : tradDynForm.whichRessourceType ,
 	            inputType : "tagList",
                 placeholder : "Choisir un type",
-                list : modules.classifieds.jobs.categories.sections,
+                list : modules.jobs.categories.sections,
                 trad : trad,
                 init : function(){
                 	$(".sectionBtn").off().on("click",function()
@@ -104,19 +104,19 @@ dynForm = {
 						var sectionKey = $(this).data('key');
 						//alert(sectionKey);
 						var what = { title : tradDynForm.inwhichcategoryforclassified+" ?", 
-				                         icon : modules.classifieds.jobs.categories.sections[sectionKey].icon }
-						if( jsonHelper.notNull( "modules.jobs.categories.sections."+sectionKey+".filters" ) ){
+				                         icon : modules.jobs.categories.sections[sectionKey].icon }
+						if( jsonHelper.notNull( "modules.jobs.categories.filters" ) ){
 				            //alert('build btns menu'+classified.sections[sectionKey].filters);
-				            modules.classifieds.jobs.categories.currentLeftFilters = modules.classifieds.jobs.categories.sections[sectionKey].filters;
-				            var filters = ressource[modules.classifieds.jobs.categories.currentLeftFilters]; 
+				            //modules.jobs.categories.currentLeftFilters = modules.jobs.categories.filters;
+				            var filters = modules.jobs.categories.filters; 
 				            directory.sectionFilter( filters, ".categoryBtntagList",what,'btn');
-				            dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn();
+				            //dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn();
 				        }
-				        else if( modules.classifieds.jobs.categories.currentLeftFilters != null ) {
+				        else if( modules.jobs.categories.currentLeftFilters != null ) {
 				            //alert('rebuild common list'); 
-				            directory.sectionFilter( modules.classifieds.jobs.categories.filters, ".categoryBtntagList",what,'btn');
-				            dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn()
-				            modules.classifieds.jobs.categories.currentLeftFilters = null;
+				            directory.sectionFilter( modules.jobs.categories.filters, ".categoryBtntagList",what,'btn');
+				            //dyFObj.elementObj.dynForm.jsonSchema.actions.initTypeBtn()
+				            modules.jobs.categories.currentLeftFilters = null;
 				        }
 						$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger'  onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'><i class='fa fa-times'></i></a> "+$(this).data('tag')+"</h4>");
 						$(".sectionBtntagList").hide();
@@ -128,28 +128,27 @@ dynForm = {
                 label : tradCategory["Type of ressource"],
 	            inputType : "tagList",
                 placeholder : tradCategory["Choose a category"],
-                list : modules.classifieds.jobs.categories.filters,
+                list : modules.jobs.categories.filters,
                 init : function(){
-	            	$(".typeBtn").off().on("click",function()
+	            	$(".categoryBtn").off().on("click",function()
 	            	{
-	            		
-	            		$(".typeBtn").removeClass("active btn-dark-blue text-white");
+	            		$(".categoryBtn").removeClass("active btn-dark-blue text-white");
 	            		$( "."+$(this).data('key')+"Btn" ).toggleClass("active btn-dark-blue text-white");
-	            		$("#ajaxFormModal #type").val( ( $(this).hasClass('active') ) ? $(this).data('tag') : "" );
+	            		$("#ajaxFormModal #category").val( ( $(this).hasClass('active') ) ? $(this).data('key') : "" );
 	            		
 	            		$(".breadcrumbcustom").html( 
 	            			"<h4><a href='javascript:;'' class='btn btn-xs btn-danger' "+
 	            					"onclick='dyFObj.elementObj.dynForm.jsonSchema.actions.clear()'>"+
 	            					"<i class='fa fa-times'></i></a> "+
 	            					$(".sectionBtn.active").data('tag')+" > "+
-	            					$(".typeBtn.active").data('tag')+
+	            					$(".categoryBtn.active").data('tag')+
 	            			"</h4>" );
 	            		$(".categoryBtntagList").hide();
 
 	            		//$(".typeBtn:not(.active)").hide();
 	            		$("#ajaxFormModal #subtype").val("");
 	            		fieldHTML = "";
-	            		$.each(modules.classifieds.jobs.categories.subcat, function(k,v) { 
+	            		$.each(modules.jobs.categories.subcat, function(k,v) { 
 	            			fieldHTML += '<div class="col-md-6 padding-5">'+
         									'<a class="btn tagListEl subtypeBtn '+k+'Btn " data-tag="'+v.key+'" data-lbl="'+tradCategory[v.key]+'" href="javascript:;">'+tradCategory[v.key]+'</a>' +
 	            						"</div>";
@@ -174,7 +173,7 @@ dynForm = {
 		            											"<i class='fa fa-times'></i>"+
 		            										  "</a> "+
 		            										  $(".sectionBtn.active").data('tag')+" > "+
-		            										  $(".typeBtn.active").data('tag')	 +" > "+
+		            										  $(".categoryBtn.active").data('tag')	 +" > "+
 		            										  $(".subtypeBtn.active").data('lbl')+
 		            									 "</h4>");
 		            		$(".subtypeSectioncustom").hide();

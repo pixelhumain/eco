@@ -23,12 +23,12 @@ urlCtrl.loadableUrls["#ressources.co"] = {title:'RESSOURCES', icon : 'puzzle-pie
 urlCtrl.loadableUrls["#rsc"] = {"alias":"#ressources"};
 
 //co.js object types
-typeObj.classified = {  col:"classifieds",ctrl:"classified",color:"azure", icon:"bullhorn", titleClass : "azure", bgClass : "bgPerson"};
+typeObj.classified = {  col:"classifieds",ctrl:"classified",color:"azure", icon:"bullhorn", titleClass : "bg-azure", bgClass : "bgPerson"};
 typeObj.classifieds = { sameAs:"classified" };
 
-typeObj.ressource = {  col:"ressources",ctrl:"ressources",color:"vine", icon:"cube", titleClass : "bg-vine", bgClass : "bgPerson"};
+typeObj.ressource = {  col:"classifieds",ctrl:"classified",color:"vine", icon:"cube", titleClass : "bg-vine", bgClass : "bgPerson"};
 typeObj.ressources = { sameAs:"ressource" };
-typeObj.job = {  col:"jobs",ctrl:"job",color:"yellow-k", icon:"briefcase", titleClass : "bg-yellow-k", bgClass : "bgPerson"};
+typeObj.job = {  col:"classifieds",ctrl:"classified",color:"yellow-k", icon:"briefcase", titleClass : "bg-yellow-k", bgClass : "bgPerson"};
 typeObj.jobs = { sameAs:"job" };
 
 //CO LANG
