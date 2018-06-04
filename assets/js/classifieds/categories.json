@@ -1,5 +1,5 @@
 {
-    "icon":"bulhorn",
+    "icon":"money",
     "color":"azure",
     "label":"Sales & Rent",
     "labelFront":"salesrents",
@@ -9,7 +9,7 @@
         "forrent"   : { "label":"Rent", "labelFront":"For rent", "key" : "forrent", "icon" : "external-link"}
     },
     "filters" : {
-         "technology"   : { "key":"technolgy", "label":"Technology", "icon" : "laptop", 
+        "technology"   : { "key":"technolgy", "label":"Technology", "icon" : "laptop", 
             "subcat" : {
                 "tvVideo":{"key":"tvVideo", "label":"TV / Video", "icon":""},
                 "it":{"key":"it", "label":"IT", "icon":""},
@@ -19,7 +19,7 @@
                 "audiodevice":{"key":"audiodevice", "label":"Audio device", "icon":""}
             }
         },
-         "property"     : { "key":"property", "label":"Property"  , "icon" : "building"     , 
+        "property"     : { "key":"property", "label":"Property"  , "icon" : "building"     , 
             "subcat" : {
                 "house":{"key":"house", "label":"House", "icon":""},
                 "flat":{"key":"flat", "label":"Flat", "icon":""},

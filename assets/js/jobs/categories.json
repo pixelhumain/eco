@@ -14,8 +14,8 @@
     },
     "filters":{
         "joboffer" : { "label":"Job offers", "key" : "joboffer", "icon" : "briefcase"},
-        "training" : { "label":"Training", "key" : "training", "icon" : "book-open"},
-        "internship" : { "label":"Internship", "key" : "internship", "icon" : "chalkboard-teacher"}
+        "training" : { "label":"Training", "key" : "training", "icon" : "book"},
+        "internship" : { "label":"Internship", "key" : "internship", "icon" : "dashboard"}
     },
     "subcat":{
         "purComptManagement" : {"icon":"briefcase", "key":"purComptManagement", "poleEmploiKey":"gestionComptabilite", "label":"Purchase-Comptability-Management"},

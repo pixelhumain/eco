@@ -171,9 +171,10 @@
 			<div class="col-md-12 margin-bottom-20 no-padding">
 				<?php echo @$element["description"]; ?>
 				<hr>
-				<?php foreach(@$element["tags"] as $tag){ ?>
+				<?php if(@$element["tags"]){
+					foreach(@$element["tags"] as $tag){ ?>
 					<label class="label bg-red">#<?php echo Yii::t("category", @$tag); ?></label>
-				<?php } ?>
+				<?php } } ?>
 			</div>
 		</div>
 

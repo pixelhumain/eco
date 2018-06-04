@@ -29,6 +29,7 @@ class Classified {
 	    "section" => array("name" => "section"),
 	    "type" => array("name" => "type"),
 	    "subtype" => array("name" => "subtype"),
+	    "category" => array("name" => "category"),
 	    "name" => array("name" => "name", "rules" => array("required")),
 	    "address" => array("name" => "address", "rules" => array("addressValid")),
 	    "addresses" => array("name" => "addresses"),
