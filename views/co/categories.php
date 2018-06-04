@@ -160,4 +160,3 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
     //directory.sectionFilter(classifieds.categories);
   });
 </script>
-  

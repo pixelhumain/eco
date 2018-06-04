@@ -14,8 +14,8 @@
     },
     "filters":{
         "joboffer" : { "label":"Job offers", "key" : "joboffer", "icon" : "briefcase"},
-        "training" : { "label":"Training", "key" : "training", "icon" : "briefcase"},
-        "internship" : { "label":"Internship", "key" : "internship", "icon" : "briefcase"}
+        "training" : { "label":"Training", "key" : "training", "icon" : "book-open"},
+        "internship" : { "label":"Internship", "key" : "internship", "icon" : "chalkboard-teacher"}
     },
     "subcat":{
         "purComptManagement" : {"icon":"briefcase", "key":"purComptManagement", "poleEmploiKey":"gestionComptabilite", "label":"Purchase-Comptability-Management"},
@@ -40,7 +40,7 @@
         "humanRessource":{"label":"Human ressources", "key":"humanRessource", "poleEmploiKey":"ressourcesHumaines","icon":"group"},
         "health":{"label":"Health", "key":"health", "poleEmploiKey":"sante","icon":"stethoscope"},
         "assistanatSecretariat":{"label":"Secretariat-Assistantship", "key":"assistanatSecretariat", "poleEmploiKey":"assistanatSecretariat","icon":"support"},
-        "personalServices":{"label":"personalServices", "key":"personalServices", "poleEmploiKey":"servicesALaPersonne","icon":"blind"},
+        "personalServices":{"label":"Personal services", "key":"personalServices", "poleEmploiKey":"servicesALaPersonne","icon":"blind"},
         "publicService":{"label":"Public services", "key":"publicService", "poleEmploiKey":"fonctionPublique","icon":"university"},
         "rDEngineering":{"label":"R&D, engineering", "key":"rDEngineering", "poleEmploiKey":"rDIngenierie","icon":"university"},
         "transportLogistic":{"label":"Transport-Logistic", "key":"transportLogistic", "poleEmploiKey":"transportLogistique","icon":"truck"},

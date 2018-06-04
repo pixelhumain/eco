@@ -2,7 +2,7 @@
     "icon":"cubes",
     "color":"vine",
     "label":"Helping",
-    "labelFront":"voluntary",
+    "labelFront":"Sharing",
     "type":"ressource",
     "sections" : {
         "need": { "label":"Need something", "labelFront" : "Needs", "key" : "need", "icon" : "angle-double-down"},

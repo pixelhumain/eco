@@ -1,7 +1,7 @@
 <?php
 
 class Classified {
-	const COLLECTION = "classified";
+	const COLLECTION = "classifieds";
 	const CONTROLLER = "classified";
 	const MODULE = "eco";
 	const ICON = "fa-bullhorn";

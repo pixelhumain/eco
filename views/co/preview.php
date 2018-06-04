@@ -99,7 +99,7 @@
 			<button class="btn btn-default pull-right btn-close-preview" style="margin-top:-15px;">
 					<i class="fa fa-times"></i>
 			</button>
-			<?php if( $element["creator"] == Yii::app()->session["userId"] || Authorisation::canEditItem( Yii::app()->session["userId"], Ressource::COLLECTION, $id, @$element["parentType"], @$element["parentId"] ) ){?>
+			<?php if( $element["creator"] == Yii::app()->session["userId"] || Authorisation::canEditItem( Yii::app()->session["userId"], Classified::COLLECTION, $id, @$element["parentType"], @$element["parentId"] ) ){?>
 			<button class="btn btn-default pull-right text-red deleteThisBtn" data-type="ressources" data-id="<?php echo $id ?>" style="margin-top:-15px;">
 				<i class=" fa fa-trash"></i>
 			</button>
@@ -110,13 +110,15 @@
 			<br>
 			<a href="#page.type.<?php echo @$type; ?>.id.<?php echo (string)@$element["_id"]; ?>" 
 				class="letter-green lbh">
-				#page.type.<?php echo @$type; ?>.id.<?php echo (string)@$element["_id"]; ?>
+				#page.type.<?php echo Classified::COLLECTION ?>.id.<?php echo (string)@$element["_id"]; ?>
 			</a>
 
-			<?php if(@$element["type"]){ ?>
+			<?php if(@$element["section"]){ ?>
 				<hr class="hr10">
-				<small>
-					<?php echo Yii::t("category", @$element["type"]); ?> > 
+					<?php echo Yii::t("category", @$element["type"]); ?> >
+					<?php echo Yii::t("category", @$element["section"]); ?> >
+				<small> 
+					<?php echo Yii::t("category", @$element["category"]); ?> >
 					<?php echo Yii::t("category", @$element["subtype"]); ?>
 				</small>
 			<?php } ?>
@@ -133,7 +135,7 @@
 				<?php } ?>
 			</div>
 			<?php 
-				$images=Document::getListDocumentsWhere(array("id"=>(string)$element["_id"],"type"=>$type,"doctype"=>Document::DOC_TYPE_IMAGE),Document::DOC_TYPE_IMAGE);
+				$images=Document::getListDocumentsWhere(array("id"=>(string)$element["_id"],"type"=>Classified::COLLECTION,"doctype"=>Document::DOC_TYPE_IMAGE),Document::DOC_TYPE_IMAGE);
 					$this->renderPartial('../pod/sliderMedia', 
 								array(
 									  "medias"=>@$element["medias"],
@@ -185,7 +187,7 @@
 	  				$creator = Person::getById($element["creator"]);
 		  		
 	  	  ?>
-			<button class="btn btn-link bg-azure margin-bottom-15" id="btn-private-contact" data-name-el="<?php echo $creator['name']; ?>" data-username="<?php echo $creator['username']; ?>" data-id="<?php echo $element['creator']; ?>" >
+			<button class="btn btn-link bg-azure margin-bottom-15" id="btn-private-contact" data-name-el="<?php echo $creator['name']; ?>" data-username="<?php echo @$creator['username']; ?>" data-id="<?php echo $element['creator']; ?>" >
 				<i class="fa fa-comments"></i> <?php echo Yii::t("ressources", "Send a private message to the author");  ?>
 			</button>
 		<?php } ?>

@@ -28,7 +28,7 @@ typeObj.classifieds = { sameAs:"classified" };
 
 typeObj.ressource = {  col:"ressources",ctrl:"ressources",color:"vine", icon:"cube", titleClass : "bg-vine", bgClass : "bgPerson"};
 typeObj.ressources = { sameAs:"ressource" };
-typeObj.job = {  col:"jobs",ctrl:"job",color:"brown", icon:"briefcase", titleClass : "bg-brown", bgClass : "bgPerson"};
+typeObj.job = {  col:"jobs",ctrl:"job",color:"yellow-k", icon:"briefcase", titleClass : "bg-yellow-k", bgClass : "bgPerson"};
 typeObj.jobs = { sameAs:"job" };
 
 //CO LANG
