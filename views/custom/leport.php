@@ -1,4 +1,9 @@
-<div class="col-xs-12" style="background-color: white">
+<style type="text/css">
+  #customHeader{
+    margin-top: 85px;
+  }
+</style>
+<div class="col-xs-12" id="customHeader" style="background-color: white">
 	
   <h1 class="homestead text-dark">Le Port : Emploi, Formation, Stage</h1>
   <div class="col-xs-10">
@@ -17,33 +22,6 @@
   </div>
 </div>
 
-- prevention à al fraude 
-	- approprio demande d'infos 
-pole 
-	un vision du marché de l'emploie
-	web cv video 
-	information marché du travail 
-		photo instant T du marché de aujourd'hui demain 
-			combien de jeune portois déscolarisé
-		statisitque 
-			FB, twitter
-Mission Local 
-	pas de publication 
-	remplissage et partage en interne seulemen 
-	dispositif d'accompagnement , opporntunié 
-	e-lectronisme 
-CMA 
-	events
-	offres apprentissage
-	validation des données
-	ouverture de l'information 
-
-departement 
-	comm
-
-manque 
-	centre de formation contrat pro 
-	medef : vos travail 974 
 
 
 
