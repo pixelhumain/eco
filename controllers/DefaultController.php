@@ -26,8 +26,7 @@ class DefaultController extends CommunecterController {
       
     	if(Yii::app()->request->isAjaxRequest)
         echo $this->renderPartial("co2.views.app.search",array("type"=>"classifieds"));
-      else
-      {
+      else{
         $this->layout = "//layouts/directory";
         echo $this->render("co2.views.app.search",array("type"=>"classifieds"));
       }
