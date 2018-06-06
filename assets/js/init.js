@@ -76,3 +76,13 @@ typeObj.classifieds = { sameAs:"classified"};*/
 
 //CO LANG
 
+function bindEcoSource(){
+    
+
+    $("#btn-select-source").click(function(){
+
+        alert("HELLO THERE");
+    });
+}
+
+bindEcoSource();
