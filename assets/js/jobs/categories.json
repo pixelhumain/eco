@@ -5,8 +5,8 @@
     "label":"Jobs",
     "labelFront":"joboffers",
     "sections" : {
-        "need": { "label":"Search in offers", "labelFront" : "isearchajob", "key" : "need", "icon" : "angle-double-down"},
-        "offer": {"label":"Recruit someone", "labelFront" : "irecruit","key" : "offer","icon" : "angle-double-up"}
+        "need": { "label":"Search in offers", "labelFront" : "irecruit", "key" : "need", "icon" : "angle-double-down"},
+        "offer": {"label":"Recruit someone", "labelFront" : "isearchajob","key" : "offer","icon" : "angle-double-up"}
     },
     "sources":{
         "co"   : { "label":"Communecter", "labelFront":"For sale", "key" : "co", "path" : "/images/logos/logo-min.png"},

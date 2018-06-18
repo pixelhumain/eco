@@ -152,7 +152,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
     <hr class="col-md-12 col-sm-12 col-xs-12 no-padding" style="width: 95%;margin-left: 2%;margin-bottom: 0px;">
   </div>
 </div>-->
-<div class="no-padding col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 col-xs-12 text-left pull-left headerSearchContainer"></div>
+<div class="no-padding col-md-10 col-sm-10 col-sm-offset-1 col-md-offset-1 col-xs-12 text-left headerSearchContainer"></div>
 <script type="text/javascript">
   //var classifieds = modules.classifieds;
   jQuery(document).ready(function() {
