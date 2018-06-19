@@ -76,7 +76,7 @@ dynForm = {
 	    		$(".categoryBtntagList").hide(); 
 	    		$(".subtypeSection").html("");
 	    		$(".subtypeSectioncustom").show();
-	    		$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags").hide();
+	    		$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").hide();
 	    	}
 	    },
 	    properties : {
@@ -167,7 +167,7 @@ dynForm = {
 		            		var subtype = ( $(this).hasClass('active') ) ? $(this).data('tag') : "";
 		            		subtype = subtype != "" ? subtype : "";
 		            		$("#ajaxFormModal #subtype").val( subtype );
-		            		$(".nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags").show();
+		            		$(".nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").show();
 		            		//$(".subtypeBtn:not(.active)").hide();
 
 		            		$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger' "+

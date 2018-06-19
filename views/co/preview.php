@@ -100,7 +100,7 @@
 					<i class="fa fa-times"></i>
 			</button>
 			<?php if( $element["creator"] == Yii::app()->session["userId"] || Authorisation::canEditItem( Yii::app()->session["userId"], Classified::COLLECTION, $id, @$element["parentType"], @$element["parentId"] ) ){?>
-			<button class="btn btn-default pull-right text-red deleteThisBtn" data-type="ressources" data-id="<?php echo $id ?>" style="margin-top:-15px;">
+			<button class="btn btn-default pull-right text-red deleteThisBtn" data-type="classifieds" data-id="<?php echo $id ?>" style="margin-top:-15px;">
 				<i class=" fa fa-trash"></i>
 			</button>
 			<button class="btn btn-default pull-right btn-edit-preview" style="margin-top:-15px;">
@@ -234,6 +234,7 @@
 
 	var element= <?php echo json_encode($element); ?>;
 	var type = "<?php echo $type; ?>";
+	var typeClassified = "<?php echo @$element["type"]; ?>";
 	console.log("thisressource", element);
 	
 	jQuery(document).ready(function() {	
@@ -250,7 +251,7 @@
 
 	    initBtnLink();
 
-	    getAjax("#commentElement",baseUrl+"/"+moduleId+"/comment/index/type/ressources/id/"+element['_id']['$id'],
+	    getAjax("#commentElement",baseUrl+"/"+moduleId+"/comment/index/type/classifieds/id/"+element['_id']['$id'],
 				function(){  			
 		},"html");
 
@@ -281,7 +282,7 @@
 		$(".btn-edit-preview").click(function(){
 			$("#modal-preview-coop").hide(300);
 			$("#modal-preview-coop").html("");
-			dyFObj.editElement('ressources', '<?php echo $id ?>' );
+			dyFObj.editElement('classifieds', '<?php echo $id ?>', typeClassified );
 		});
 		
 		element["id"] = element['_id']['$id'];
