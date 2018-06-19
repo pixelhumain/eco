@@ -32,39 +32,22 @@
 <div class="col-xs-12" id="customHeader" style="background-color: white">
   
   <h1 class="homestead text-dark">Le Port : Emploi, Formation, Stage</h1>
-  <div class="col-xs-10">
+  <div class="col-xs-9">
   <img class="img-responsive" src='<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/banner.png'> 
   </div>
-  <div class="col-xs-2" >
+  <div class="col-xs-3" >
     <img class="img-responsive" src='<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/LOGO.jpg'> 
     <h2>Une ville Dynamique</h2>
-    <p style="overflow-y: hidden;height: 200px;">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <p style="overflow-y: hidden;height: 430px;">
+    Dynamiser le parcours du participant demandeur d'emploi tout en le sécurisant, pour le préparer à l'emploi (et réduire la durée) <br/> Lever les obstacles à l'emploi : travail sur les freins périphériques (mobilité, garde d'enfant, freins socio économiques). <br/> Une clé d’entrée : partir des besoins des entreprises et des compétences attendues en situation de travail <br/> Une approche : développer les compétences transversales et transférables des participants <br/> Mutualiser les moyens.</p>
   </div>
 </div>
 
 
   <div class="col-md-12 col-lg-12 col-sm-12 imageSection no-padding" 
-     style="margin-top: 80px; position:relative;">
+     style=" position:relative;">
 
-    <div class="col-md-12">
-      <?php if(!isset(Yii::app()->session['userId'])) { ?>
-        <div id="videoDocsImg" class="col-md-12 col-sm-12 col-xs-12 text-center">
-            <img class="img-responsive" style="max-height: 450px;"
-               src="<?php echo $this->module->assetsUrl; ?>/images/<?php echo Yii::app()->language ?>/network-for-all.png"/>
-             <button class="btn btn-link bg-red margin-left-10" data-toggle="modal" data-target="#modalRegister">
-              <i class="fa fa-plus-circle"></i> <?php echo Yii::t("login","Create my <b>citizen</b> account") ?>
-             </button>
-        </div>
-      
-      
-      <?php }  ?>
-    </div>
+    
 
     
     <div class="col-sm-12 col-md-12 col-xs-12 no-padding" style="background-color:#fff; max-width:100%; float:left;">
@@ -117,7 +100,7 @@
                              VILLE LE PORT
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
-                          <a href="/ph/#annonces?searchSType=jobs&source=poleEmploi"><img class="img-responsive" style="margin:0 auto;" 
+                          <a href="#annonces?searchSType=jobs&source=poleEmploi"><img class="img-responsive" style="margin:0 auto;" 
                              src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/pôle-emploi-logo-300x300.jpg"/>
                              POLE EMPLOI</a>
                         </div>
