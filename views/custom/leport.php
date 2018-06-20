@@ -117,9 +117,9 @@
                              VILLE LE PORT
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
-                          <img class="img-responsive" style="margin:0 auto;" 
+                          <a href="/ph/#annonces?searchSType=jobs&source=poleEmploi"><img class="img-responsive" style="margin:0 auto;" 
                              src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/pôle-emploi-logo-300x300.jpg"/>
-                             POLE EMPLOI
+                             POLE EMPLOI</a>
                         </div>
                         <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
                           <img class="img-responsive" style="margin:0 auto;" 
@@ -131,15 +131,16 @@
                              src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/tco.png"/>
                              TERRITOIRE <br/>DE LA COTE OUEST
                         </div>
-                        <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
-                          <img class="img-responsive" style="margin:0 auto;" 
-                             src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/logo_mls.png"/>
-                             MISSIONS LOCALES
-                        </div>
+                        
                         <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
                           <img class="img-responsive" style="margin:0 auto;" 
                              src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/dep.jpg"/>
                              DEPARTEMENT RÉUNION
+                        </div>
+                        <div class="col-lg-3 col-md-2 col-sm-4 col-xs-6">
+                          <img class="img-responsive" style="margin:0 auto;" 
+                             src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/logo_mls.png"/>
+                             MISSIONS LOCALES
                         </div>
                         <div class="visible-lg col-lg-3">
                           <img class="img-responsive" style="margin:0 auto;" 
