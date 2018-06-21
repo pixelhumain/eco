@@ -13,24 +13,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
   padding: 10px;
   /*border: 1px solid #bbb;*/
 }
-.btn-add, .btn-select-type-anc{
-  border-radius: 5px;
-}
-.btn-select-type-anc{
-  text-transform: uppercase;
-}
-.btn-select-type-anc, .btn-select-type-anc:hover, .btn-select-type-anc:active{
-  border-color: transparent;
-}
-#sub-menu-left .subsub .btn, #sub-menu-left .sourcesInterrop .btn, #sub-menu-left .sectionsFilters .btn {
-  text-transform: uppercase;
-  font-size:12px;
-  width: 95%;
-  text-align: right;
-  background-color: white;
-      font-weight: lighter !important;
-  border-color: white;
-}
+
 #sub-menu-left h4{
   margin:0px;
 }
@@ -40,7 +23,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
   margin-bottom: 5px;
   margin-top: 5px;
 }
-.keycat:hover{
+/*.keycat:hover{
   width:inherit !important;
   text-overflow: inherit !important;
   white-space: inherit !important;
@@ -52,7 +35,7 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
 .btn-select-category:hover, .btn-select-category.active, .btn-select-section:hover, .btn-select-section.active {
     background-color: #2C3E50!important;
     color: #fff!important;
-    border-color: transparent!important;
+    border-color: transparent!important;}*/
 </style>
 
 <!--<div class="col-xs-12 col-sm-12 col-md-12" id="sectionMenu">
