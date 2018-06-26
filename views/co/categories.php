@@ -13,7 +13,6 @@ HtmlHelper::registerCssAndScriptsFiles($cssAnsScriptFilesModule,  Yii::app()->th
   padding: 10px;
   /*border: 1px solid #bbb;*/
 }
-
 #sub-menu-left h4{
   margin:0px;
 }
