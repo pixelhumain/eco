@@ -69,8 +69,8 @@ dynForm = {
 		    $("#ajaxFormModal #type").val("classifieds");
 	    },
 	    afterSave : function(){
-			if( $('.fine-uploader-manual-trigger').fineUploader('getUploads').length > 0 )
-		    	$('.fine-uploader-manual-trigger').fineUploader('uploadStoredFiles');
+			if( $(uploadObj.domTarget).fineUploader('getUploads').length > 0 )
+		    	$(uploadObj.domTarget).fineUploader('uploadStoredFiles');
 		    else {
 		    	dyFObj.closeForm();
 			    urlCtrl.loadByHash( (uploadObj.gotoUrl) ? uploadObj.gotoUrl : location.hash );
