@@ -161,7 +161,7 @@
 		  		
 	  	  ?>
 			<button class="btn btn-link bg-azure margin-bottom-15" id="btn-private-contact" 
-					data-name-el="<?php echo $creator['name']; ?>" data-username="<?php echo $creator['username']; ?>" 
+					data-name-el="<?php echo $creator['name']; ?>" data-username="<?php echo @$creator['username']; ?>" 
 					sdata-id="<?php echo $element['creator']; ?>" >
 				<i class="fa fa-comments"></i> <?php echo Yii::t("ressources", "Send a private message to the author");  ?>
 			</button>
