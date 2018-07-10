@@ -30,7 +30,6 @@
 </style>
 
 <div class="col-xs-12" id="customHeader" style="background-color: white">
-  
   <h1 class="homestead text-dark">Le Port : Emploi, Formation, Stage</h1>
   <div class="col-xs-9">
   <img class="img-responsive" src='<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/banner.png'> 
@@ -195,7 +194,7 @@
                         </div>
                     </a>
 
-                    <a href="javascript:;" data-hash="#annonces" class=" btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 padding-10 margin-top-5" data-type="classified" >
+                    <a href="javascript:;" data-hash="#annonces" class=" btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 padding-10 margin-top-5" data-type="classifieds" >
                         <div class="text-center">
                             <div class="col-md-12 no-padding text-center">
                                 <h4 class="no-margin text-red">
@@ -686,7 +685,6 @@ jQuery(document).ready(function() {
   topMenuActivated = false;
   hideScrollTop = true;
   checkScroll();
-
   loadLiveNow();
   $(".videoSignal").click(function(){
     openVideo();
