@@ -2,7 +2,11 @@
 
 class Classified {
 	const COLLECTION = "classifieds";
+	const TYPE_RESSOURCES = "ressources";
+	const TYPE_JOBS = "jobs";
 	const CONTROLLER = "classified";
+	const TYPE_RESSOURCES_CONTROLLER= "ressource";
+	const TYPE_JOBS_CONTROLLER= "job";
 	const MODULE = "eco";
 	const ICON = "fa-bullhorn";
 	
@@ -88,6 +92,8 @@ class Classified {
 	public static function getById($id) { 
 	  	$classified = PHDB::findOneById( self::COLLECTION ,$id );
 	  	//$classified["parent"] = Element::getElementByTypeAndId()
+	  	$classified["typeClassified"]=@$classified["type"];
+	  	$classified["type"]=self::COLLECTION;
 	  	$classified["gallery"] = Document::listMyDocumentByIdAndType(@$id, "classified");
 	  	return $classified;
 	}

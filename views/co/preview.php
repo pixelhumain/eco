@@ -87,13 +87,15 @@
 
 		<div class="col-xs-12 margin-top-50">
 			<?php if(@$element["parent"]["name"]){ ?>
-				<span class="letter-azure font-montserrat">
-					<i class="fa fa-angle-down"></i> <i class="fa fa-bullhorn"></i> 
-					<?php echo Yii::t("ressources", @$type." published by");  ?> 
-					<a href="#page.type.<?php echo @$element["parentType"]; ?>.id.<?php echo @$element["parentId"]; ?>" 
-						class="lbh">
-						<?php echo @$element["parent"]["name"]; ?>
-					</a>
+				<span class="letter-<?php echo Element::getColorIcon(@$element["typeClassified"]) ?> font-montserrat">
+					<i class="fa fa-angle-down"></i> <i class="fa fa-<?php echo Element::getFaIcon(@$element["typeClassified"]) ?>"></i> 
+					<?php echo Yii::t("classified", "{what} published by {who}", 
+						array("{what}"=>Yii::t("common",Element::getControlerByCollection(@$element["typeClassified"])),
+							"{who}"=>"<a href='#page.type.".@$element["parentType"].".id.".@$element["parentId"]."' class='lbh'>".
+										@$element["parent"]["name"].
+									"</a>")
+						);
+					 ?> 
 				</span>
 			<?php } ?>
 			<button class="btn btn-default pull-right btn-close-preview" style="margin-top:-15px;">
@@ -115,11 +117,10 @@
 
 			<?php if(@$element["section"]){ ?>
 				<hr class="hr10">
-					<?php echo Yii::t("category", @$element["type"]); ?> >
-					<?php echo Yii::t("category", @$element["section"]); ?> >
+					<span class="sectionClassified"><?php echo Yii::t("category", @$element["section"]); ?></span> >
 				<small> 
-					<?php echo Yii::t("category", @$element["category"]); ?> >
-					<?php echo Yii::t("category", @$element["subtype"]); ?>
+					<span class="categoryClassified"><?php echo Yii::t("category", @$element["category"]); ?></span> >
+					<span class="subtypeClassified"><?php echo Yii::t("category", @$element["subtype"]); ?></span>
 				</small>
 			<?php } ?>
 
@@ -238,6 +239,9 @@
 	console.log("thisressource", element);
 	
 	jQuery(document).ready(function() {	
+		if(element.section != "undefined") $(".sectionClassified").text(tradCategory[element.section]);
+		if(element.category != "undefined") $(".categoryClassified").text(tradCategory[element.category]);
+		if(element.subtype != "undefined") $(".subtypeClassified").text(tradCategory[element.subtype]);			
 		var nav = directory.findNextPrev("#page.type."+type+".id."+element['_id']['$id']);
 
 		//if(typeof params.name != "undefined" && params.name != "")
