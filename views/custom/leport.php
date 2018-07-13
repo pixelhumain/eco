@@ -25,22 +25,73 @@
 
 <style type="text/css">
   #customHeader{
-    margin-top: 50px;
+    margin-top: 47px;
+  }
+  #costumBanner{
+    max-height: 375px;
+  }
+  #costumBanner h1{
+    position: absolute;
+    color: white;
+    background-color: rgba(0,0,0,0.4);
+    font-size: 29px;
+    bottom: 0px;
+    padding: 20px;
+  }
+  #costumBanner h1 span{
+    color: #eeeeee;
+    font-style: italic;
+  }
+  #costumBanner img{
+    min-width: 100%;
+  }
+  @media screen and (min-width: 450px) and (max-width: 1024px) {
+    .logoDescription{
+      width: 60%;
+      margin:auto;
+    }
+  }
+
+  @media (max-width: 1024px){
+    #customHeader{
+      margin-top: -1px;
+    }
+  }
+  @media (max-width: 768px){
+
   }
 </style>
 
-<div class="col-xs-12" id="customHeader" style="background-color: white">
-  <h1 class="homestead text-dark">Le Port : Emploi, Formation, Stage</h1>
-  <div class="col-xs-9">
+<div class="col-xs-12 no-padding" id="customHeader" style="background-color: white">
+  <div id="costumBanner" class="col-xs-12 col-sm-12 col-md-9 no-padding">
+   <h1>Emploi 2.0<br/><span class="small">Une interface numérique dédiée à l'emploi et à la formation</span></h1>
   <img class="img-responsive" src='<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/banner.png'> 
   </div>
-  <div class="col-xs-3" >
-    <img class="img-responsive" src='<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/LOGO.jpg'> 
-    <h2>Une ville Dynamique</h2>
-    <p style="overflow-y: hidden;height: 430px;">
-    Dynamiser le parcours du participant demandeur d'emploi tout en le sécurisant, pour le préparer à l'emploi (et réduire la durée) <br/> Lever les obstacles à l'emploi : travail sur les freins périphériques (mobilité, garde d'enfant, freins socio économiques). <br/> Une clé d’entrée : partir des besoins des entreprises et des compétences attendues en situation de travail <br/> Une approche : développer les compétences transversales et transférables des participants <br/> Mutualiser les moyens.</p>
+  <div class="col-xs-12 col-sm-12 col-md-3 text-center padding-10" >
+    <img class="img-responsive logoDescription" src='<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/LOGO.jpg'> 
+    <!--<h2>Une ville Dynamique</h2>-->
+    <span style="overflow-y: hidden;max-height: 375px;">
+      <span class="col-xs-12 margin-bottom-5">
+        <b>Dynamiser le parcours demandeur d'emploi</b> tout en le sécurisant</span><br/>
+      <span class="col-xs-12 margin-bottom-5">
+        <b>Préparer</b> à l'emploi et <b>réduire</b> la durée
+      </span> <br/> 
+      <span class="col-xs-12 margin-bottom-5">
+        <b>Lever les obstacles à l'emploi</b> : mobilité, garde d'enfant, freins socio économiques
+      </span> <br/> 
+      <span class="col-xs-12 margin-bottom-5">
+        Partir des <b>besoins des entreprises</b> et des <b>compétences attendues</b>
+      </span><br/>
+      <span class="col-xs-12 margin-bottom-5"><b>
+        Développer les compétences</b> transversales et transférables des participants <br/> 
+      </span>
+      <span class="col-xs-12 margin-bottom-5">
+        <b>Mutualiser</b> les moyens
+      </span>
+    </span>
   </div>
 </div>
+<!--Dynamiser le parcours du participant demandeur d'emploi tout en le sécurisant, pour le préparer à l'emploi (et réduire la durée) <br/> Lever les obstacles à l'emploi : travail sur les freins périphériques (mobilité, garde d'enfant, freins socio économiques). <br/> Une clé d’entrée : partir des besoins des entreprises et des compétences attendues en situation de travail <br/> Une approche : développer les compétences transversales et transférables des participants <br/> Mutualiser les moyens.-->
 
 
   <div class="col-md-12 col-lg-12 col-sm-12 imageSection no-padding" 
@@ -140,12 +191,25 @@
             <h3 class="col-xs-12 text-center">
               <i class="fa fa-th"></i> <?php echo Yii::t("home", "5 main applications") ?><br>
               <small>
-                <b>Communecter :</b> <?php echo Yii::t("home", "an innovative societal network") ?>,<br>
-                <?php echo Yii::t("home", "created for citizens actors of change") ?>
+                <b>Le Port 2.0 :</b> <?php echo Yii::t("home", "L'innovation au service de l'emploi") ?>,<br>
+                <?php //echo Yii::t("home", "created for citizens actors of change") ?>
               </small>
               <hr style="width:40%; margin:20px auto; border: 4px solid #cecece;">
             </h3>
 
+                    <a href="javascript:;" data-hash="#annonces" class=" btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 col-md-offset-2 padding-10 margin-top-5" data-type="classifieds" >
+                        <div class="text-center">
+                            <div class="col-md-12 no-padding text-center">
+                                <h4 class="no-margin text-red">
+                                  <i class="fa fa-bullhorn"></i>
+                                  <?php echo Yii::t("home","Offres d'emploi") ?>
+                                    <br><small class="text-dark">
+                                        <?php echo Yii::t("home","Retoruvez toutes les annonces d'offres d'emploi, de stages et de formations dans votre ville")?>
+                                    </small>
+                                </h4>
+                            </div>
+                        </div>
+                    </a>
             <a href="javascript:;" data-hash="#search" class="btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 padding-10 margin-top-5" data-type="search" >    
                         <div class="text-center">
                             <!-- <h4 class="text-red no-margin "><i class="fa fa-search"></i>
@@ -179,7 +243,9 @@
                             </div>
                         </div>
                     </a>
-                               
+                            <div class=" col-xs-12 col-sm-6 col-md-4 padding-20 hidden-xs hidden-sm" style="">
+              <img class="img-responsive" style="margin:0 auto;margin-top: 0px;" src="<?php echo $this->module->assetsUrl; ?>/images/home/modules_screen.png"/>
+            </div>  
                     <a href="javascript:;" data-hash="#agenda" class="btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 padding-10 margin-top-5" data-type="agenda">
                         <div class="text-center">
                             <div class="col-md-12 no-padding text-center">
@@ -194,46 +260,17 @@
                         </div>
                     </a>
 
-                    <a href="javascript:;" data-hash="#annonces" class=" btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 padding-10 margin-top-5" data-type="classifieds" >
-                        <div class="text-center">
-                            <div class="col-md-12 no-padding text-center">
-                                <h4 class="no-margin text-red">
-                                  <i class="fa fa-bullhorn"></i>
-                                  <?php echo Yii::t("home","A market place") ?>
-                                    <br><small class="text-dark">
-                                        <?php echo Yii::t("home","For local and community exchanges")?>
-                                    </small>
-                                </h4>
-                            </div>
-                        </div>
-                    </a>
 
-                    <div class=" col-xs-12 col-sm-6 col-md-4 padding-20 hidden-xs" style="">
-              <img class="img-responsive" style="margin:0 auto;margin-top: 0px;" src="<?php echo $this->module->assetsUrl; ?>/images/home/modules_screen.png"/>
-            </div>
+            
 
-                    <a href="javascript:;" data-hash="#ressources" class="btn-main-menu lbh-menu-app col-xs-12 col-sm-6 col-md-4 padding-10 margin-top-5" > 
-                        <div class="text-center">
-                            <div class="col-md-12 no-padding text-center">
-                                <h4 class="no-margin text-red">
-                                  <i class="fa fa-cubes"></i>
-                                  <?php echo Yii::t("home","Exchanges of ressources") ?>
-                                    <br><small class="text-dark">
-                                        <?php echo Yii::t("home","To share needs, offers, services, competences for more efficiency")?>
-                                    </small>
-                                </h4>
-                            </div>
-                        </div>
-                    </a>
-
-
-                    <div class=" col-xs-12 col-sm-6 col-md-4 padding-20 visible-xs" style="">
+                   
+             <div class=" col-xs-12 col-sm-6 col-md-4 padding-20 visible-xs visible-sm" style="">
               <img class="img-responsive" style="margin:0 auto;margin-top: 0px;" src="<?php echo $this->module->assetsUrl; ?>/images/home/modules_screen.png"/>
             </div>
 
 
 
-            <h3 class="text-center col-xs-12">
+           <!-- <h3 class="text-center col-xs-12">
               <hr style="width:40%; margin:20px auto; border: 4px solid #cecece;">
               <small>
                 <?php echo Yii::t("home","Because the need to <b>communicate</b> locally has never been so important"); ?>,<br> 
@@ -254,13 +291,13 @@
 
 
 
-          </div>
+          </div>-->
           <!-- <div class="col-md-6 col-sm-6 col-xs-12 padding-20" style="background-color: #f6f6f6;text-align:center;min-height:400px;">
             <img class="img-responsive" style="margin:0 auto;margin-top: 50px;" src="<?php echo $this->module->assetsUrl; ?>/images/home/modules_screen.png"/>
           </div> -->
         </div>
 
-        <div class="col-xs-12 no-padding">
+       <!-- <div class="col-xs-12 no-padding">
                 <div class="col-md-12 col-sm-12 col-xs-12" style="background-color: #fff; text-align:center;min-height:400px;">
             <h4 class="margin-top-50"><i class="fa fa-map-marker"></i> <?php echo Yii::t("home","Map") ?></h4>
               <div class="col-md-12 text-center">
@@ -292,19 +329,19 @@
                 <div class="col-md-6 col-sm-6 col-xs-12 hidden" style="text-align:center; min-height:400px;">
             <img class="img-responsive" style="margin:auto; margin-top: 10px; max-height:380px;" src="<?php echo $this->module->assetsUrl; ?>/images/home/carto_home.png"/>
           </div>
-        </div>
+        </div> -->
 
 
-        <div class="col-xs-12 no-padding">
+        <!--<div class="col-xs-12 no-padding">
           <div class="col-md-12 col-sm-12 col-xs-12 padding-20" style="background-color: #f6f6f6; text-align:center;min-height:400px;">
             <h4 class="margin-top-50"><i class="fa fa-map-marker"></i> <i class="fa fa-newspaper-o"></i> 
               <?php echo Yii::t("home","Are you ready for geo-communication") ?> ?
               <hr style="width:40%; margin:10px auto; border: 4px solid #cecece;">
             </h4>
 
-            <h3 class="text-center col-xs-12 no-margin">
+            <h3 class="text-center col-xs-12 no-margin">-->
               <!-- <hr style="width:40%; margin:10px auto; border: 4px solid #cecece;"> -->
-              <small>
+              <!--<small>
                 <?php echo Yii::t("home","Imagine a world where your messages can be broadcast") ?><br>
                 <b><?php echo Yii::t("home","in a public and geographical way") ?></b>
                 <br>...
@@ -331,7 +368,7 @@
 
 
         <di
-      </div>
+      </div>-->
       
     </div>
 
@@ -342,10 +379,11 @@
     <center>
       <i class="fa fa-caret-down" style="color:#f6f6f6"></i><br/>
     
+      <i class="fa fa-briefcase fa-4x text-white"></i>
       <h1 class="homestead" style="color:#fff">
         L'EMPLOI 2.0
       </h1>
-      <i class="fa fa-handshake-o fa-4x text-white"></i>
+      
           
       <style>.hhh a{color:white; font-weight: bold;text-transform: underline;}</style>
       <div class="col-sm-12 text-white padding-bottom-15 hhh">
@@ -485,7 +523,7 @@
   </div>
 
 
-  <div class="col-md-12" style="color:#293A46; background-color: #dfe7e9; float:left; width:100%;">
+  <!--<div class="col-md-12" style="color:#293A46; background-color: #dfe7e9; float:left; width:100%;">
     <center>
       <i class="fa fa-caret-down" style="color:#fff"></i>
       <div class="col-xs-12 margin-top-10 margin-bottom-25">
@@ -499,9 +537,9 @@
         } ?>
       </div>
     </center>
-  </div>
+  </div>-->
 
-  <div class="col-xs-12 margin-top-25" >
+  <!--<div class="col-xs-12 margin-top-25" >
     <h3 class="text-red text-center"><?php echo Yii::t("home","Read Us") ?></h3>
     <hr class="angle-down">
   </div>
@@ -581,7 +619,7 @@
                   <i>"<?php echo Yii::t("home", "From each according to his means, to each according to his needs") ?>"</i>
                 </small>
                 </h5>
-      </div>
+      </div>-->
       <!--<div class="col-md-6 col-sm-6 col-xs-12 padding-20" style="background-color: white; text-align:center;min-height:400px;">
         Image , Design avec boutton pour aller sur le don <br/><br/>
         <a href="https://www.helloasso.com/associations/open-atlas/collectes/communecter/don" target="_blank" class="margin-top-20 no-padding" style="width:100%;text-decoration: none;">
@@ -590,25 +628,39 @@
           </h3>
         </a>
       </div>-->
-  </div>
+  <!--</div>-->
   
-
+<div class="col-sm-12 col-md-12 col-xs-12 no-padding" style="background-color:#E33551; max-width:100%; float:left;" id="teamSection">
+     <center>
+       <i class="fa fa-caret-down" style="color:#f6f6f6"></i><br>
+    
+      <i class="fa fa-handshake-o fa-4x text-white"></i>
+      <h1 class="homestead" style="color:#fff">
+      <?php echo Yii::t("home","Financé par") ?>
+      </h1>
+      
+      <div class="col-xs-8 col-md-4 col-md-offset-4 col-xs-offset-2">
+        <div class="col-xs-4 padding-10 bg-white"> <img class="img-responsive" style="margin:0 auto;" 
+                             src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/LOGO.jpg"/></div>
+        <div class="col-xs-4"> <img class="img-responsive" style="margin:0 auto;" 
+                             src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/prefecture-reunion.jpg"/>
+                         </div>
+        <div class="col-xs-4"> <img class="img-responsive" style="margin:0 auto;" 
+                             src="<?php echo Yii::app()->getModule("eco")->assetsUrl; ?>/images/custom/leport/cgte.png"/>
+                         </div>
+      </div>
+    </center>
+    <div class="space20 col-xs-12" style="margin-bottom: 20px;"></div>
+  </div>
   <div class="col-md-12 contact-map padding-bottom-50" style="color:#293A46; float:left; width:100%;" id="contactSection">
     <center>
       <i class="fa fa-caret-down" style="color:#E33551"></i>
-      <br/>
-      <br/>
       <h1 class="homestead">
-      <a target="_blank" href="https://github.com/pixelhumain/communecter" class="btn btn-github btn-social"><span class="fa fa-github"></span> </a>
-      <br/>
-      <br/>
       <?php echo Yii::t("home","CONTACT") ?>
       </h1>
-      + 262 262 34 36 86<br><img src="<?php echo Yii::app()->theme->baseUrl; ?>/assets/img/contactCO_footer_welcome.png" height="15"/>
+      + 262 262 34 36 86<br>mailleport@leport.fr
 
-      <br/><a href="#docs.page.openatlas.dir.<?php echo Yii::app()->language ?>" data-id="explainOpenAtlas" class="lbh"><?php echo Yii::t("home","Open Atlas NGO") ?></a>
-      <br/><a href="#docs.page.mention.dir.<?php echo Yii::app()->language ?>" class="lbh" ><?php echo Yii::t("home","Legal notice") ?></a>
-      <br/><a href="#docs.page.partners.dir.panels" class="lbh"><?php echo Yii::t("home","Partners") ?></a>
+      <br/><a href="https://github.com/pixelhumain/communecter" target="_blank"><?php echo Yii::t("home","powered by <span style='color:#E33551;'>@communecter</span>") ?></a>
     <center>
   </div>
 
