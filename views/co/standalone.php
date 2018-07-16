@@ -87,14 +87,16 @@
 	<div class="col-xs-12 col-lg-11 col-lg-offset-1">
 		<div class="col-xs-12 margin-top-50">
 			<?php if(@$element["parent"]["name"]){ ?>
-			<span class="letter-azure font-montserrat">
-				<i class="fa fa-angle-down"></i> <i class="fa fa-bullhorn"></i> 
-				<?php echo Yii::t("ressources", "ressources published by");  ?> 
-				<a href="#page.type.<?php echo @$element["parent"]["type"]; ?>.id.<?php echo @$element["parent"]["_id"]; ?>" 
-					class="lbh">
-					<?php echo @$element["parent"]["name"]; ?>
-				</a>
-			</span>
+				<span class="letter-<?php echo Element::getColorIcon(@$element["typeClassified"]) ?> font-montserrat">
+					<i class="fa fa-angle-down"></i> <i class="fa fa-<?php echo Element::getFaIcon(@$element["typeClassified"]) ?>"></i> 
+					<?php echo Yii::t("classified", "{what} published by {who}", 
+						array("{what}"=>Yii::t("common",Element::getControlerByCollection(@$element["typeClassified"])),
+							"{who}"=>"<a href='#page.type.".@$element["parentType"].".id.".@$element["parentId"]."' class='lbh'>".
+										@$element["parent"]["name"].
+									"</a>")
+						);
+					 ?> 
+				</span>
 			<?php } ?>
 			<?php if(@$element["type"]){ ?>
 			<hr class="hr10">
@@ -215,7 +217,7 @@
 
 	    initBtnLink();
 
-	    getAjax("#commentElement",baseUrl+"/"+moduleId+"/comment/index/type/ressources/id/"+element['_id']['$id'],
+	    getAjax("#commentElement",baseUrl+"/"+moduleId+"/comment/index/type/classifieds/id/"+element['_id']['$id'],
 		function(){},"html");
 	    
 		$("#btn-private-contact").click(function(){
