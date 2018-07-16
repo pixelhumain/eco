@@ -79,6 +79,7 @@ class Classified {
 				"$" => "$",
 	            "CFP" => "CFP"
 	        ),
+	        "eco" => "€dzfzfezfezfz",
     		"deviseDefault" => "All",
     		"lbhp" => true
 		);
