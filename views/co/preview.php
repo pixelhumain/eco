@@ -235,7 +235,7 @@
 
 	var element= <?php echo json_encode($element); ?>;
 	var type = "<?php echo $type; ?>";
-	var typeClassified = "<?php echo @$element["type"]; ?>";
+	var typeClassified = "<?php echo @$element["typeClassified"]; ?>";
 	console.log("thisressource", element);
 	
 	jQuery(document).ready(function() {	
