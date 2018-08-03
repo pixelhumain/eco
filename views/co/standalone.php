@@ -108,7 +108,7 @@
 		</div>
 		<div class="col-md-6 col-sm-7 col-xs-12 contentOnePage">
 			<div class="col-md-12 no-padding title text-left margin-top-15">
-				<h4 class="pull-left"><?php echo ucfirst($element["name"]) ?></h4>
+				<h4 class="pull-left"><?php echo ucfirst(@$element["name"]) ?></h4>
 				<?php if(@$element["price"] && @$element["devise"]){ ?>
 					<h4 class="pull-right letter-green">
 						<?php echo @$element["price"]." ".@$element["devise"]; ?>
@@ -163,7 +163,7 @@
 		  		
 	  	  ?>
 			<button class="btn btn-link bg-azure margin-bottom-15" id="btn-private-contact" 
-					data-name-el="<?php echo $creator['name']; ?>" data-username="<?php echo @$creator['username']; ?>" 
+					data-name-el="<?php echo @$creator['name']; ?>" data-username="<?php echo @$creator['username']; ?>" 
 					sdata-id="<?php echo $element['creator']; ?>" >
 				<i class="fa fa-comments"></i> <?php echo Yii::t("ressources", "Send a private message to the author");  ?>
 			</button>
