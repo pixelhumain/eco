@@ -74,6 +74,7 @@
 	#modal-preview-coop{
 		overflow: auto;
 	}
+	
 
 </style>
 
@@ -169,7 +170,7 @@
 
 
 
-			<div class="col-md-12 margin-bottom-20 no-padding">
+			<div class="col-md-12 margin-bottom-20 no-padding ws-pre-line">
 				<?php echo @$element["description"]; ?>
 				<hr>
 				<?php if(@$element["tags"]){
