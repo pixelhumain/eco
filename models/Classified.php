@@ -95,7 +95,8 @@ class Classified {
 	  	//$classified["parent"] = Element::getElementByTypeAndId()
 	  	$classified["typeClassified"]=@$classified["type"];
 	  	$classified["type"]=self::COLLECTION;
-	  	$classified["gallery"] = Document::listMyDocumentByIdAndType(@$id, "classified");
+	  	$where=array("id"=>@$id, "type"=>self::COLLECTION, "doctype"=>"image");
+	  	$classified["images"] = Document::getListDocumentsWhere($where, "image");//(@$id, self::COLLECTION);
 	  	return $classified;
 	}
 

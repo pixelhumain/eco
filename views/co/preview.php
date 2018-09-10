@@ -137,37 +137,13 @@
 				<?php } ?>
 			</div>
 			<?php 
-				$images=Document::getListDocumentsWhere(array("id"=>(string)$element["_id"],"type"=>Classified::COLLECTION,"doctype"=>Document::DOC_TYPE_IMAGE),Document::DOC_TYPE_IMAGE);
+				//$images=Document::getListDocumentsWhere(array("id"=>(string)$element["_id"],"type"=>Classified::COLLECTION,"doctype"=>Document::DOC_TYPE_IMAGE),Document::DOC_TYPE_IMAGE);
 					$this->renderPartial('../pod/sliderMedia', 
 								array(
 									  "medias"=>@$element["medias"],
-									  "images" => @$images,
+									  "images" => @$element["images"],
 									  ) ); 
 									  ?>
-
-			<?php if(@$element["gallery"]) { $i=0; ?>
-				<!--<div id="myCarousel" class="col-md-12 no-padding carousel carousel-media slide" data-ride="carousel">
-										  <ol class="carousel-indicators pull-left">
-
-					    <?php foreach($element["gallery"] as $k => $img){ $i++; ?>
-								<li data-target="#myCarousel" data-slide-to="<?php echo $i-1; ?>" 
-									class="pull-left <?php if($i==1) echo "active"; ?>">
-							    	<img src="<?php echo $img["path"]; ?>" alt="img">
-							    </li>
-					  	<?php } ?>
-
-					  </ol>
-
-					  <div class="carousel-inner">
-					  <?php $i=0; foreach($element["gallery"] as $k => $img){ $i++; ?>
-							    <div class="item <?php if($i==1) echo "active"; ?>">
-							      <img src="<?php echo $img["path"]; ?>" alt="img">
-							    </div>
-					  <?php } ?>
-					  </div>
-				</div>-->
-			<?php } ?>
-
 
 
 			<div class="col-md-12 margin-bottom-20 no-padding ws-pre-line">
@@ -237,7 +213,6 @@
 	var element= <?php echo json_encode($element); ?>;
 	var type = "<?php echo $type; ?>";
 	var typeClassified = "<?php echo @$element["typeClassified"]; ?>";
-	console.log("thisressource", element);
 	
 	jQuery(document).ready(function() {	
 		if(element.section != "undefined") $(".sectionClassified").text(tradCategory[element.section]);

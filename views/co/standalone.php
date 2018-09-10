@@ -98,12 +98,22 @@
 					 ?> 
 				</span>
 			<?php } ?>
-			<?php if(@$element["type"]){ ?>
-			<hr class="hr10">
-			<small>
-				<?php echo Yii::t("category", @$element["type"]); ?> > 
-				<?php echo Yii::t("category", @$element["subtype"]); ?>
-			</small>
+			<?php if( $element["creator"] == Yii::app()->session["userId"] || Authorisation::canEditItem( Yii::app()->session["userId"], Classified::COLLECTION, (string)$element["_id"], @$element["parentType"], @$element["parentId"] ) ){?>
+			<button class="btn btn-default pull-right text-red deleteThisBtn" data-type="<?php echo Classified::COLLECTION ?>" data-id="<?php echo (string)$element["_id"] ?>" style="margin-top:-15px;">
+				<i class=" fa fa-trash"></i> <?php echo Yii::t("common","Delete") ?>
+			</button>
+			<button class="btn btn-default pull-right btn-edit-preview" style="margin-top:-15px;margin-right: 5px;">
+				<i class="fa fa-pencil"></i> <?php echo Yii::t("common","Edit") ?>
+			</button>
+			<?php } ?>
+			<br>
+			<?php if(@$element["section"]){ ?>
+				<hr class="hr10">
+					<span class="sectionClassified"><?php echo Yii::t("category", @$element["section"]); ?></span> >
+				<small> 
+					<span class="categoryClassified"><?php echo Yii::t("category", @$element["category"]); ?></span> >
+					<span class="subtypeClassified"><?php echo Yii::t("category", @$element["subtype"]); ?></span>
+				</small>
 			<?php } ?>
 		</div>
 		<div class="col-md-6 col-sm-7 col-xs-12 contentOnePage">
@@ -116,39 +126,23 @@
 				<?php } ?>
 			</div>
 
-			<?php if(@$element["gallery"]) { $i=0; ?>
-				<div id="myCarousel" class="col-md-12 no-padding carousel carousel-media slide" data-ride="carousel">
-					  <!-- Indicators -->
-					  <ol class="carousel-indicators pull-left">
-
-					    <?php foreach($element["gallery"] as $k => $img){ $i++; ?>
-								<li data-target="#myCarousel" data-slide-to="<?php echo $i-1; ?>" 
-									class="pull-left <?php if($i==1) echo "active"; ?>">
-							    	<img src="<?php echo $img["path"]; ?>" alt="img">
-							    </li>
-					  	<?php } ?>
-
-					  </ol>
-
-					  <!-- Wrapper for slides -->
-					  <div class="carousel-inner">
-					  <?php $i=0; foreach($element["gallery"] as $k => $img){ $i++; ?>
-							    <div class="item <?php if($i==1) echo "active"; ?>">
-							      <img src="<?php echo $img["path"]; ?>" alt="img">
-							    </div>
-					  <?php } ?>
-					  </div>
-				</div>
-			<?php } ?>
+			<?php $this->renderPartial('../pod/sliderMedia', 
+				array(
+					  "medias"=>@$element["medias"],
+					  "images" => @$element["images"],
+					  ) ); 
+			?>
 
 
 
 			<div class="col-md-12 margin-bottom-20 no-padding">
 				<?php echo @$element["description"]; ?>
 				<hr>
-				<?php foreach(@$element["tags"] as $tag){ ?>
+				<?php if(@$element["tags"]){
+				 	foreach(@$element["tags"] as $tag){ ?>
 					<label class="label bg-red">#<?php echo Yii::t("category", @$tag); ?></label>
-				<?php } ?>
+				<?php }
+				} ?>
 			</div>
 		</div>
 
@@ -210,7 +204,8 @@
 
 	var element= <?php echo json_encode($element); ?>;
 	var type = "<?php echo $type; ?>";
-	console.log("thisRessource", element);
+	var id=element._id.$id;
+	var typeClassified = "<?php echo @$element["typeClassified"]; ?>";
 	
 	jQuery(document).ready(function() {	
 		var nav = directory.findNextPrev("#page.type."+type+".id."+element['_id']['$id']);
@@ -237,7 +232,18 @@
 		});
 		
 		setTitle("", "", element.name);
+		$("#modal-preview-coop .btn-close-preview, .deleteThisBtn").click(function(){
+			console.log("close preview");
+			$("#modal-preview-coop").hide(300);
+			$("#modal-preview-coop").html("");
+		});
 
+		$(".btn-edit-preview").click(function(){
+			$("#modal-preview-coop").hide(300);
+			$("#modal-preview-coop").html("");
+			dyFObj.editElement('classifieds', id, typeClassified );
+		});
+		
 		element["id"] = element['_id']['$id'];
 
 		$("#modal-preview-coop").hide(300);
