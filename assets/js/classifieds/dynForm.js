@@ -69,20 +69,7 @@ dynForm = {
 		    $("#ajaxFormModal #type").val("classifieds");
 	    },
 	    afterSave : function(){
-	    	listObject=$(uploadObj.domTarget).fineUploader('getUploads');
-	    	goToUpload=false;
-	    	if(listObject.length > 0){
-	    		$.each(listObject, function(e,v){
-	    			if(v.status == "submitted")
-	    				goToUpload=true;
-	    		});
-	    	}
-			if( goToUpload )
-		    	$(uploadObj.domTarget).fineUploader('uploadStoredFiles');
-		    else {
-		    	dyFObj.closeForm();
-			    urlCtrl.loadByHash( (uploadObj.gotoUrl) ? uploadObj.gotoUrl : location.hash );
-		    }
+	    	dyFObj.commonAfterSave();
 	    },
 	    canSubmitIf : function () { 
 	    	if( $("#ajaxFormModal #section").val() && $("#ajaxFormModal #type").val() &&  $("#ajaxFormModal #subtype").val() )
