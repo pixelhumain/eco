@@ -1,6 +1,6 @@
 dynForm = {
     jsonSchema : {
-	    title : trad.addjobs,
+	    title : tradDynForm.addjobs,
 	    icon : "briefcase",
 	    type : "object",
 	    onLoads : {
@@ -76,14 +76,14 @@ dynForm = {
 	    properties : {
 	    	info : {
                 inputType : "custom",
-                html:"<p><i class='fa fa-info-circle'></i> Jobs i need or tell your offers.</p>",
+                html:"<p><i class='fa fa-info-circle'></i> Proposer vos offres d'emploi, vos offres de stage ou les formations que vous organisez.<br/>Exprimer une offre que vous recherchez<br/></p>",
             },
             breadcrumb : {
                 inputType : "custom",
                 html:"",
             },
             sectionBtn :{
-                label : tradDynForm.whichRessourceType ,
+                label : tradCategory["Choose a categoryjobs"] ,
 	            inputType : "tagList",
                 placeholder : "Choisir un type",
                 list : modules.jobs.categories.sections,

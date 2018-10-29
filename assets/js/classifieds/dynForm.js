@@ -6,10 +6,10 @@ dynForm = {
 	    onLoads : {
 	    	//pour creer un subevnt depuis un event existant
 	    	sub : function(){
-	    		dyFInputs.setSub();
+	    		dyFInputs.setSub("bg-azure");
 	    	},
 	    	onload : function(data){
-	    		$("#ajax-modal .modal-header").removeClass("bg-dark bg-purple bg-red bg-azure bg-green bg-green-poi bg-orange bg-yellow bg-blue bg-turq bg-url")
+	    		$("#ajax-modal .modal-header").removeClass("bg-dark bg-purple bg-red bg-azure bg-green bg-green-poi bg-orange bg-yellow bg-yellow-k bg-brown bg-blue bg-turq bg-url")
 							  					  .addClass("bg-azure");
 	    		
 	    		if(data && data.section && data.type ){
