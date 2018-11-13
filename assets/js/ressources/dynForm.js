@@ -18,7 +18,7 @@ dynForm = {
 					$(".sectionBtntagList").hide();
 					$(".categoryBtntagList").hide();
 	    		} else
-	    			$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").hide();
+	    			$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .publiccheckboxSimple, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").hide();
 
 	    		contextDataId = userId;
 	    		contextDataType = "citoyens";
@@ -71,7 +71,7 @@ dynForm = {
 	    		$(".categoryBtntagList").hide(); 
 	    		$(".subtypeSection").html("");
 	    		$(".subtypeSectioncustom").show();
-	    		$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").hide();
+	    		$(".categoryBtntagList, .nametext, .descriptiontextarea, .pricetext, .contactInfotext, .publiccheckboxSimple, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").hide();
 	    	}
 	    },
 	    properties : {
@@ -162,7 +162,7 @@ dynForm = {
 		            		var subtype = ( $(this).hasClass('active') ) ? $(this).data('tag') : "";
 		            		subtype = subtype != "" ? subtype : "";
 		            		$("#ajaxFormModal #subtype").val( subtype );
-		            		$(".nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").show();
+		            		$(".nametext, .descriptiontextarea, .pricetext, .contactInfotext, .locationlocation, .publiccheckboxSimple, .imageuploader, .formshowerscustom, .tagstags, #btn-submit-form").show();
 		            		//$(".subtypeBtn:not(.active)").hide();
 
 		            		$(".breadcrumbcustom").html( "<h4><a href='javascript:;'' class='btn btn-xs btn-danger' "+
@@ -186,6 +186,15 @@ dynForm = {
             subtype : dyFInputs.inputHidden(),
             type : dyFInputs.inputHidden(),
             name : dyFInputs.name("ressource"),
+            public : dyFInputs.checkboxSimple("true", "public", 
+    										{"onText" : trad.yes,
+    										  "offText": trad.no,
+    										  "onLabel" : tradDynForm.public,
+    										  "offLabel": tradDynForm.private,
+    										  "labelText": tradDynForm.makeprojectvisible+" ?",
+    										  //"labelInInput": "Activer les amendements",
+    										  "labelInformation": tradDynForm.explainvisibleproject
+    		}),
 	        image : dyFInputs.image(),
             description : dyFInputs.textarea("Description", "..."),
             location : dyFInputs.location,

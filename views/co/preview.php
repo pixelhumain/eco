@@ -124,7 +124,10 @@
 					<span class="subtypeClassified"><?php echo Yii::t("category", @$element["subtype"]); ?></span>
 				</small>
 			<?php } ?>
-
+			<?php if(@$element["preferences"] && @$element["preferences"]["private"]){ ?> 
+				<br>
+				<span class="text-red"><i class="fa fa-lock"></i> <?php echo Yii::t("common","private") ?></span>
+			<?php } ?>
 		</div>
 
 		<div class="col-md-12 col-sm-12 col-xs-12 contentOnePage">
