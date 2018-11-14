@@ -9,6 +9,8 @@ class Classified {
 	const TYPE_JOBS_CONTROLLER= "job";
 	const MODULE = "eco";
 	const ICON = "fa-bullhorn";
+	const ICON_RESSOURCES = "fa-cubes";
+	const ICON_JOBS = "fa-briefcase";
 	
 	//TODO Translate
 	public static $classifiedTypes = array(
@@ -54,8 +56,10 @@ class Classified {
 	    "tags" => array("name" => "tags"),
 	    "price" => array("name" => "price"),
 	    "devise" => array("name" => "devise"),
+	    "public"  => array("name" => "public"),
+	    "preferences"  => array("name" => "preferences"),
 	    "contactInfo" => array("name" => "contactInfo", "rules" => array("required")),
-
+	    "source" => array("name" => "source", "rules" => array("source")),
 	    "modified" => array("name" => "modified"),
 	    "updated" => array("name" => "updated"),
 	    "creator" => array("name" => "creator"),
