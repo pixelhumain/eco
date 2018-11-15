@@ -191,9 +191,9 @@ dynForm = {
     										  "offText": trad.no,
     										  "onLabel" : tradDynForm.public,
     										  "offLabel": tradDynForm.private,
-    										  "labelText": tradDynForm.makeprojectvisible+" ?",
+    										  "labelText": tradDynForm.makeressourcevisible+" ?",
     										  //"labelInInput": "Activer les amendements",
-    										  "labelInformation": tradDynForm.explainvisibleproject
+    										  "labelInformation": tradDynForm.explainvisibleressource
     		}),
 	        image : dyFInputs.image(),
             description : dyFInputs.textarea("Description", "..."),
